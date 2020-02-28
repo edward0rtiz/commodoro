@@ -1,1 +1,4 @@
-documentation for commodoro WIP
+Documentation for commodoro web application marketplace (work in progress)
+
+Contributing
+============
