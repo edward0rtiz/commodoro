@@ -7,3 +7,4 @@ Contributing
 
 
 ** API
+Stack: Python/Django, React JS, Postgres
