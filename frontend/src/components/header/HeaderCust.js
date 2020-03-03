@@ -9,7 +9,7 @@ class HeaderCust extends Component {
   render() {
     return (
       <div className="main-header">
-          <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+          <Header>
             <div className="logo" />
             <Menu
               theme="dark"
