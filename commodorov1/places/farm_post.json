@@ -1,0 +1,17 @@
+{
+	"farm_name": " Las Pulgas",
+	"description": "Acevedo is a municipality located in the south-easternmost corner of the Huila department of Colombia. Wedged in the fork between the central and eastern cordilleras (mountain ranges) where the Colombian Andes, coming up from the south, split into three distinct mountain ranges (the western, central and eastern cordilleras). Just beyond the central and eastern cordillera convergence is jungle and thus, moist, cool air. The affect that this has on Acevedo microclimates is that of a simulated increase in elevation—there is a wide diversity in humidity, temperature and rainfall—leading to differing but ideal coffee-growing conditions. The variety found in the cup profiles coming from Acevedo reflect its array of microclimates.",
+	"region": "Latin America",
+	"country": "Colombia",
+	"farmer": 2,
+	"farm_coffee": [{
+		"farm": 1,
+		"name": "Acevedo",
+		"description": "Alejandro Renjifo, Fairfield’s founder and president, has a background one might not expect from someone bumping along the dirt roads in and around Acevedo. In his early career as a coffee economist, Alejandro held long stints at both the International Coffee Organization (ICO) and the Federación Nacionale de Cafeteros de Colombia (FNC). One hig hlight from these experiences is that during his time he was responsible for launching the FNC’s specialty division in North America. During a time when Colombian coffee was mainly characterized by Juan Valdéz, a fictional character, Alejandro was pushing for the FNC to recognize the incredible diversity of Colombian terroir.",
+		"price": 17,
+		"variety": "Catillo, Colombia",
+		"processing": "Washed",
+		"crop_year": 2020,
+		"couping_score": 87
+	}]
+}
