@@ -20,16 +20,27 @@ const HeaderCust = () =>
           </div>
         </Col>
         <Col>
-          <Navbar id="header-navbar">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features"> Create </Nav.Link>
-              <Nav.Link href="#shop"><TiShoppingCart /></Nav.Link>
-            </Nav>
-          </Navbar>
+          <Nav className="justify-content-end" activeKey="/home">
+            <Nav.Item>
+              <Nav.Link href="/home">Active</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="link-1">Link</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="link-2">Link</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="disabled" disabled>
+                Disabled
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
         </Col>
       </Row>
       <Row>
+        <Col>
+        <p id="slogan">Decentralized Market Place</p>
         <InputGroup className="mb-3">
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-default"> <FaSearch /> </InputGroup.Text>
@@ -39,6 +50,7 @@ const HeaderCust = () =>
             aria-describedby="inputGroup-sizing-default"
           />
         </InputGroup>
+        </Col>
       </Row>
     </Container>
   </header>

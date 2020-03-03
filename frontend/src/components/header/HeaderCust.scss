@@ -2,6 +2,8 @@
     background: url(./main-background-img.jpg) 50% 50% no-repeat;
     background-size: cover;
     color: #fff;
+    font-weight: 600;
+    text-shadow: -5px 4px 2px #000000;
     min-height: 300px;
     padding: 10px 20px 20px;
     opacity: 0.75;
@@ -32,10 +34,25 @@
     vertical-align: middle;
 }
 
-#header-navbar {
-    justify-content: flex-end;
+
+.nav-link {
+    color: white;
+    font-weight: 600;
+    text-shadow: -5px 4px 2px #000000;
 }
 
-#header-navbar a {
-    color: white;
+.input-group {
+    margin-top: 30px;
+    width: 70%;
+   // align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#slogan {
+    text-align: center;
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: 50px;
+    text-shadow: -5px 4px 2px #000000;
 }
