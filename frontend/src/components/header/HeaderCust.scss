@@ -1,0 +1,41 @@
+.home-header {
+    background: url(./main-background-img.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 300px;
+    padding: 10px 20px 20px;
+    opacity: 0.75;
+}
+
+.header-layout {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.branding {
+    display: flex;
+}
+
+#brand-text p {
+    margin: 0px 15px;
+}
+
+.logo {
+    margin-right: 0;
+    margin-top: 0;
+    display: inline-block;
+}
+
+.logo img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+#header-navbar {
+    justify-content: flex-end;
+}
+
+#header-navbar a {
+    color: white;
+}
