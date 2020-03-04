@@ -1,4 +1,4 @@
-import React, {useState, Profiler} from 'react';
+import React, {useState} from 'react';
 import { Carousel} from 'react-bootstrap';
 import farmPic from '../content/02.jpg';
 import profPic from '../content/profilepic.jpg';

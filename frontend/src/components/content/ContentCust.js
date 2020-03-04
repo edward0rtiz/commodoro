@@ -13,7 +13,7 @@ const ContentCust = () =>
           <div className="container">
             <div className="row">
               {/* First Card */}
-              <div className="card mb-3 card-cont-cust">
+              <div className="card mb-3 card-cont-cust" id="card-main-info">
                 <div className="row no-gutters">
                   <div className="col-md-3">
                     <CarouselPic />
@@ -21,27 +21,30 @@ const ContentCust = () =>
                   <div className="col-md-9">
                     <div className="card-body">
                       <h5 className="card-title">Las Pulgas</h5>
+                      <h6 className="user-text"> Offered by </h6>
                       <ReadMore />
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* Second Card */}
-            <div className="card mb-3 card-cont-cust">
-              <div className="row no-gutters">
-                <div className="col-md-3">
-                  <h5 className="card-title" id="specs">General Information</h5>
-                </div>
-                <div className="col-md-9">
-                  <div className="card-body">
-                    <p className="card-text">Variety: Castillo, Colombia.</p>
-                    <p className="card-text">Procesing: washed.</p>
-                    <p className="card-text">Crop year: 2020.</p>
-                    <p className="card-text">Couping score: 87.</p>
+              {/* End First Card */}
+              {/* Second Card */}
+              <div className="card mb-3 card-cont-cust" id="card-sub-info">
+                <div className="row no-gutters">
+                  <div className="col-md-3">
+                    <h5 className="card-title" id="specs">General Information</h5>
+                  </div>
+                  <div className="col-md-9">
+                    <div className="card-body">
+                      <p className="card-text">Variety: Castillo, Colombia.</p>
+                      <p className="card-text">Procesing: washed.</p>
+                      <p className="card-text">Crop year: 2020.</p>
+                      <p className="card-text">Couping score: 87.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              {/* End Second Card */}
             </div>
           </div>
         </Col>

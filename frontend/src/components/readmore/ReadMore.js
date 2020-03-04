@@ -22,7 +22,7 @@ function ReadMore () {
   };
 
   // destructure
-  const { text, index } = content;
+  const { text } = content;
 
   // set max characters
   const maxLength = 120;
