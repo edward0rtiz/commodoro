@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import ReadMore from '../readmore/ReadMore';
+import StickyBar from '../stickybar/StickyBar';
 
 const ContentCust = () =>
   <div className="content-container">
@@ -64,7 +65,9 @@ const ContentCust = () =>
             </div>
           </div>
         </Col>
-        <Col sm={4}>sm=4</Col>
+        <Col sm={4}>
+        <StickyBar />
+        </Col>
       </Row>
     </Container>
   </div>
