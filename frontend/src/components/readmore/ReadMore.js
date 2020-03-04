@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ReadMore.scss";
+import { Button } from "react-bootstrap";
 
 function ReadMore () {
   let [expanded, expand] = useState(false);
@@ -16,13 +17,12 @@ function ReadMore () {
 
   // data
   const content = {
-    title: "Read More Example",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe fugit hic, minima dolorem suscipit optio facere eos nam architecto ipsam velit quis odio eveniet cum error dolore provident perferendis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nam voluptatum omnis tenetur autem necessitatibus cupiditate itaque quos magnam dolorum praesentium possimus enim quo id eaque sequi nesciunt nostrum officia!"
   };
 
   // destructure
-  const { title, text, index } = content;
+  const { text, index } = content;
 
   // set max characters
   const maxLength = 120;
@@ -32,23 +32,20 @@ function ReadMore () {
 
   return (
     <div className="App">
-      <h3>{title}</h3>
-
       {!expanded && exceedsMaxLength ? (
-        <p>
-          {shorten(text, maxLength) + "..."}
-
-          <a className="expandLink" onClick={handleReadMore}>
-            Read more
-          </a>
-        </p>
+        <div className="description">
+          <p>{shorten(text, maxLength) + "..."}</p>
+          <Button className="expandLink" variant="primary" size="sm" onClick={handleReadMore}>
+            Read More
+          </Button>
+        </div>
       ) : (
-        <p>
-          {text}
-          <a className="expandLink" onClick={handleReadMore}>
+        <div className="description">
+          <p>{text}</p>
+          <Button className="expandLink" variant="primary" size="sm" onClick={handleReadMore}>
             {exceedsMaxLength && "Read less"}
-          </a>
-        </p>
+          </Button>
+        </div>
       )}
     </div>
   );
