@@ -35,14 +35,14 @@ function ReadMore () {
       {!expanded && exceedsMaxLength ? (
         <div className="description">
           <p>{shorten(text, maxLength) + "..."}</p>
-          <Button className="expandLink" variant="primary" size="sm" onClick={handleReadMore}>
+          <Button className="expandLink" variant="success" size="sm" onClick={handleReadMore}>
             Read More
           </Button>
         </div>
       ) : (
         <div className="description">
           <p>{text}</p>
-          <Button className="expandLink" variant="primary" size="sm" onClick={handleReadMore}>
+          <Button className="expandLink" variant="success" size="sm" onClick={handleReadMore}>
             {exceedsMaxLength && "Read less"}
           </Button>
         </div>

@@ -4,7 +4,7 @@ import './HeaderCust.scss';
 import Logo from './commodoro_test_logo.png' ;
 import { Container, Row, Col, Nav, FormControl, InputGroup} from 'react-bootstrap';
 import { TiShoppingCart } from "react-icons/ti";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaUserCircle } from "react-icons/fa";
 
 const HeaderCust = () =>
   <header className="home-header">
@@ -22,13 +22,10 @@ const HeaderCust = () =>
         <Col>
           <Nav className="justify-content-end" activeKey="/home">
             <Nav.Item>
-              <Nav.Link href="/home">Active</Nav.Link>
+              <Nav.Link href="/home" eventKey="link-1"><h3><FaUserCircle/></h3></Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="link-1">Link</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-2"><TiShoppingCart/></Nav.Link>
+              <Nav.Link eventKey="link-2"><h3><TiShoppingCart/></h3></Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
@@ -36,7 +33,7 @@ const HeaderCust = () =>
       <Row>
         <Col>
         <p id="slogan">Decentralized Market Place</p>
-        <InputGroup className="mb-3">
+        <InputGroup size="sm" className="mb-3" id="search-bar">
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-default"> <FaSearch /> </InputGroup.Text>
           </InputGroup.Prepend>
