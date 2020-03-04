@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import ReadMore from '../readmore/ReadMore';
 
 const ContentCust = () =>
   <div className="content-container">
@@ -37,7 +38,8 @@ const ContentCust = () =>
                   <div className="col-md-9">
                     <div className="card-body">
                       <h5 className="card-title">Las Pulgas</h5>
-                      <p className="card-text">Acevedo is a municipality located in the south-easternmost corner of the Huila department of Colombia. Wedged in the fork between the central and eastern cordilleras (mountain ranges) where the Colombian Andes, coming up from the south, split into three distinct mountain ranges (the western, central and eastern cordilleras). Just beyond the central and eastern cordillera convergence is jungle and thus, moist, cool air.<span id="dots">...</span><span id="more"> The affect that this has on Acevedo microclimates is that of a simulated increase in elevation—there is a wide diversity in humidity, temperature and rainfall—leading to differing but ideal coffee-growing conditions. The variety found in the cup profiles coming from Acevedo reflect its array of microclimates.</span></p>
+                      {/* <p className="card-text">Acevedo is a municipality located in the south-easternmost corner of the Huila department of Colombia. Wedged in the fork between the central and eastern cordilleras (mountain ranges) where the Colombian Andes, coming up from the south, split into three distinct mountain ranges (the western, central and eastern cordilleras). Just beyond the central and eastern cordillera convergence is jungle and thus, moist, cool air.<span id="dots">...</span><span id="more"> The affect that this has on Acevedo microclimates is that of a simulated increase in elevation—there is a wide diversity in humidity, temperature and rainfall—leading to differing but ideal coffee-growing conditions. The variety found in the cup profiles coming from Acevedo reflect its array of microclimates.</span></p> */}
+                      <ReadMore />
                       <button onclick="myFunction()" id="myBtn">Read more</button>
                     </div>
                   </div>
