@@ -1,17 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import HeaderCust from './components/header/HeaderCust';
 import Footer from './components/footer/Footer';
+import ContentCust from './components/content/ContentCust';
 import './App.scss';
-import HeaderCust from './components/header/HeaderCust';
 
 function App() {
   return (
     <div className="page-container">
-    <div className="content-wrap">
-      <HeaderCust />
-    </div>
-      <Footer />
+      <div className="content-wrap">
+        <HeaderCust />
+        <ContentCust />
+      </div>
+        <Footer />
     </div>
   );
 }

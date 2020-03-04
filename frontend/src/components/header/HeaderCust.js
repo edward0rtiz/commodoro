@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './HeaderCust.scss';
 import Logo from './commodoro_test_logo.png' ;
-import { Container, Row, Col, Nav, FormControl, Navbar, InputGroup} from 'react-bootstrap';
+import { Container, Row, Col, Nav, FormControl, InputGroup} from 'react-bootstrap';
 import { TiShoppingCart } from "react-icons/ti";
 import { FaSearch } from "react-icons/fa";
 
@@ -28,12 +28,7 @@ const HeaderCust = () =>
               <Nav.Link eventKey="link-1">Link</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="link-2">Link</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="disabled" disabled>
-                Disabled
-              </Nav.Link>
+              <Nav.Link eventKey="link-2"><TiShoppingCart/></Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
