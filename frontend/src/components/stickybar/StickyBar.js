@@ -3,7 +3,7 @@ import "./StickyBar.scss"
 import { Card, Row, Col, Container } from 'react-bootstrap';
 import { Button } from 'react-bootstrap'
 
-const StickyBar = () => {
+const StickyBar = (props) => {
     return (
         <div>
             <div class="container-fluid">
@@ -14,17 +14,13 @@ const StickyBar = () => {
                             <Container className="text-center">
                                 <Row>
                                     <Col><b>Price</b></Col>
-                                    <Col><b>$ 7.13 USD/ kg</b></Col>
+                                    <Col><b>$ {props.price} USD/ kg</b></Col>
                                 </Row>
                             </Container>
                         </Card.Header>
                         <Card.Body>
                             <Card.Text>
                             <Container>
-                                <Row>
-                                    <Col>Price</Col>
-                                    <Col>$ 7.13 USD/ kg</Col>
-                                </Row>
                                 <Row>
                                     <Col>Available</Col>
                                     <Col>20 x 50kg bag</Col>

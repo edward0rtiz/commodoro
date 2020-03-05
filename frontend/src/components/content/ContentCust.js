@@ -12,13 +12,25 @@ class ContentCust extends Component {
     super(props);
 
     this.state = {
-      coffeName: '',
+      coffeeName: '',
+      description: '',
+      coffeeVariety: '',
+      coffeeProcessing: '',
+      coffeeCropYear: '',
+      coffeeCoupingScore: '',
     };
   }
 
   componentDidMount () {
-    axios('https://swapi.co/api/planets/1/')
-    .then(result => this.setState({coffeName: result.data.name}))
+    axios('http://127.0.0.1:8000/api/v1/farms/4/')
+    .then(result => this.setState({coffeeName: result.data.farm_name,
+    description: result.data.description,
+    coffeeVariety: result.data.farm_coffee[0].variety,
+    coffeeProcessing: result.data.farm_coffee[0].processing,
+    coffeeCropYear: result.data.farm_coffee[0].crop_year,
+    coffeeCoupingScore: result.data.farm_coffee[0].couping_score,
+    coffeePrice: result.data.farm_coffee[0].price,
+  }))
     .catch(error => error );
   }
 
@@ -38,9 +50,9 @@ class ContentCust extends Component {
                       </div>
                       <div className="col-md-9">
                         <div className="card-body">
-                          <h5 className="card-title">{this.state.coffeName}</h5>
+                          <h5 className="card-title">{this.state.coffeeName}</h5>
                           <h6 className="user-text"> Offered by </h6>
-                          <ReadMore />
+                          <ReadMore description={this.state.description}/>
                         </div>
                       </div>
                     </div>
@@ -54,10 +66,10 @@ class ContentCust extends Component {
                       </div>
                       <div className="col-md-9">
                         <div className="card-body">
-                          <p className="card-text">Variety: Castillo, Colombia.</p>
-                          <p className="card-text">Procesing: washed.</p>
-                          <p className="card-text">Crop year: 2020.</p>
-                          <p className="card-text">Couping score: 87.</p>
+                          <p className="card-text">Variety: {this.state.coffeeVariety}</p>
+                          <p className="card-text">Procesing: {this.state.coffeeProcessing}</p>
+                          <p className="card-text">Crop year: {this.state.coffeeCropYear}</p>
+                          <p className="card-text">Couping score: {this.state.coffeeCoupingScore}</p>
                         </div>
                       </div>
                     </div>
@@ -67,10 +79,10 @@ class ContentCust extends Component {
               </div>
             </Col>
             <Col sm={4}>
-            <StickyBar />
+            <StickyBar price={this.state.coffeePrice}/>
             </Col>
           </Row>
-        </Container>
+        </Container >
       </div>
       )
     }

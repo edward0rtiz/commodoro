@@ -9,6 +9,6 @@ class CoffeesListView(generics.ListCreateAPIView):
     serializer_class = CoffeeSerializer
 
 
-class CoffeesView(generics.RetrieveDestroyAPIView):
+class CoffeesView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CoffeeSerializer
     queryset = Coffee.objects.all()

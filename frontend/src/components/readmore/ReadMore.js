@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ReadMore.scss";
 import { Button } from "react-bootstrap";
 
-function ReadMore () {
+function ReadMore (props) {
   let [expanded, expand] = useState(false);
 
   function handleReadMore() {
@@ -18,7 +18,7 @@ function ReadMore () {
   // data
   const content = {
     text:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe fugit hic, minima dolorem suscipit optio facere eos nam architecto ipsam velit quis odio eveniet cum error dolore provident perferendis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nam voluptatum omnis tenetur autem necessitatibus cupiditate itaque quos magnam dolorum praesentium possimus enim quo id eaque sequi nesciunt nostrum officia!"
+      `${props.description}`
   };
 
   // destructure
