@@ -22,7 +22,7 @@ const HeaderCust = () =>
         <Col>
           <Nav className="justify-content-end" activeKey="/home">
             <Nav.Item>
-              <Nav.Link href="/home" eventKey="link-1"><h3><FaUserCircle/></h3></Nav.Link>
+              <Nav.Link href="../App" eventKey="link-1"><h3><FaUserCircle/></h3></Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="link-2"><h3><TiShoppingCart/></h3></Nav.Link>

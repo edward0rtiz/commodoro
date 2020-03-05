@@ -12,13 +12,13 @@ const NavCommodity  = () => {
                     <Nav.Link href="/home">Cotton</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">Cocoa</Nav.Link>
+                    <Nav.Link href="/home" eventKey="link-1">Cocoa</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-2">Avocado</Nav.Link>
+                    <Nav.Link href="/home" eventKey="link-2">Avocado</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-3">Sugar Cane</Nav.Link>
+                    <Nav.Link href="/home" eventKey="link-3">Sugar Cane</Nav.Link>
                 </Nav.Item>
                 </Nav>    
             </div>

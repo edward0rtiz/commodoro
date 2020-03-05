@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import App from './App'
 import * as serviceWorker from './serviceWorker';
 import './custom.scss';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Profile from './App/routes/Profile';
+
+class App extends Component {
+  render () {
+    return (
+      <BrowserRouter>
+        <Route path={"/profile"} component={Profile}>
+        </Route>
+      </BrowserRouter>
+    );
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
