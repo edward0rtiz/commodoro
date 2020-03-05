@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import NavCommodity from '../navcommodity/NavCommodity'
 import ReadMore from '../readmore/ReadMore';
 import StickyBar from '../stickybar/StickyBar';
 import CarouselPic from '../carouselpic/CarouselPic';
@@ -41,6 +42,7 @@ class ContentCust extends Component {
           <Row>
             <Col sm={8} id="main-content-container">
               <div className="container">
+                  <NavCommodity />  
                 <div className="row">
                   {/* First Card */}
                   <div className="card mb-3 card-cont-cust" id="card-main-info">
