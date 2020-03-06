@@ -9,7 +9,7 @@ const NavCommodity  = () => {
             <div id="nav-c">
                 <Nav justify variant="tabs" defaultActiveKey="/home">
                 <Nav.Item>
-                    <Nav.Link href="/home">Cotton</Nav.Link>
+                    <Nav.Link href="/home">Coffee</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link href="/home" eventKey="link-1">Cocoa</Nav.Link>
