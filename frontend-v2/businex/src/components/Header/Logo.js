@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import logo from '../../assets/img/commodoro_logo.png'
+import './Logo.scss'
 
 class Logo extends Component {
     render() {
