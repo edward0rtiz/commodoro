@@ -22,7 +22,7 @@ const SkillsExperience = ({teamMember}) => {
 
                 <div className="col-lg-6">
                     <div className="my-history-area mem-achieve-item">
-                        <h4>My Experience</h4>
+                        <h4>Certificates</h4>
 
                         <div className="history-content-wrap how-we-works-content mt-40 mt-sm-30">
                             {

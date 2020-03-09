@@ -19,43 +19,43 @@
     "skills": [
       {
         "no": 1,
-        "title": "UI",
-        "percentage": 95
+        "title": "Flavor",
+        "percentage": 80
       },
       {
         "no": 2,
-        "title": "UX",
-        "percentage": 89
+        "title": "Taste",
+        "percentage": 75
       },
       {
         "no": 3,
-        "title": "Photoshop",
-        "percentage": 91
+        "title": "Acidity",
+        "percentage": 75
       },
       {
         "no": 4,
-        "title": "Adobe XD",
-        "percentage": 85
+        "title": "Uniformity",
+        "percentage": 80
       }
     ],
     "experiences": [
       {
         "no": 1,
-        "designation": "Web Designer",
-        "icon": "team/details/date-1.png",
-        "comment": "Voluptatum deleniti atque lorem ipsum use esed et quas molestias cepte"
+        "designation": "Rain Forest Alliance",
+        "icon": "team/details/date-1.jfif",
+        "comment": "Certification of standard in sustainable farms"
       },
       {
         "no": 2,
-        "designation": "Front End Developer",
+        "designation": "JAS",
         "icon": "team/details/date-2.png",
-        "comment": "Deleniti atque lorem ipsum use esed et quas molestias cepte"
+        "comment": "Certification of organic coffee for exports in Japan."
       },
       {
         "no": 3,
-        "designation": "Senior Javascript Developer",
+        "designation": "UTZ",
         "icon": "team/details/date-3.png",
-        "comment": "Simibore et dolor amera boluptatum deleniti corrupti."
+        "comment": "Certification of sustainable coffee Farm."
       }
     ],
     "education": [
