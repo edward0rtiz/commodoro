@@ -9,7 +9,7 @@ const SkillsExperience = ({teamMember}) => {
             <div className="row mtn-50">
                 <div className="col-lg-6">
                     <div className="skill-experience-area mem-achieve-item">
-                        <h4>My Skills</h4>
+                        <h4>Coffee Features</h4>
                         <div className="skill-bar-wrap mt-40 mt-sm-30">
                             {
                                 skills.map(skill=>(
