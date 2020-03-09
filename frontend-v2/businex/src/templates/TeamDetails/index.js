@@ -2,10 +2,12 @@ import React,{Fragment} from 'react';
 import PageWrapper from "../../components/PageWrapper";
 import MemberInfo from "./MemberInfo";
 
+import { Row } from 'react-bootstrap';
 import teamData from '../../data/Team/home-one'
 import SkillsExperience from "./SkillsExperience";
 import Education from "./Education";
 import PageHeader from "../../components/PageHeader";
+import StickyBar from '../../components/StickyBar';
 
 const TeamDetailsPage = () => {
     const memberID = new URLSearchParams(window.location.search).get("id");
@@ -19,11 +21,16 @@ const TeamDetailsPage = () => {
             />
 
             <PageWrapper classes={'member-details-wrapper sm-top'}>
-                <div className="col-12">
-                    <MemberInfo teamMember={teamMember}/>
-                    <SkillsExperience teamMember={teamMember}/>
-                    <Education teamMember={teamMember}/>
-                </div>
+                <Row>
+                    <div className="col-8">
+                        <MemberInfo teamMember={teamMember}/>
+                        <SkillsExperience teamMember={teamMember}/>
+                        <Education teamMember={teamMember}/>
+                    </div>
+                    <div className="col-4">
+                        <StickyBar /> 
+                    </div>
+                </Row>
             </PageWrapper>
         </Fragment>
     );
