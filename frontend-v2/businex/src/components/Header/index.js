@@ -25,11 +25,11 @@ class Header extends Component{
             <header className="header-area">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-5 col-lg-2">
+                        <div className="col-5 col-lg-3">
                             <Logo/>
                         </div>
 
-                        <div className="col-lg-7 d-none d-lg-block">
+                        <div className="col-lg-6 d-none d-lg-block">
                             <div className="navigation-area mt-lg-3">
                                 <SearchBar />
                             </div>

@@ -42,7 +42,7 @@ const LoginRegister = () => {
                     }
                 </div>
                 <div className="copyright-content">
-                    <p> © Businex {new Date().getFullYear()} All Right Reserved.</p>
+                    <p> © Commodoro {new Date().getFullYear()} All Right Reserved.</p>
                 </div>
             </div>
         </Fragment>

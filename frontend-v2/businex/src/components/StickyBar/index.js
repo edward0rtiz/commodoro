@@ -9,7 +9,7 @@ const StickyBar = (props) => {
             <div class="container-fluid">
                 <div class="sidebar-item">
                     <div class="box-hightlight">
-                    <Card border="secondary" style={{ width: '20rem' }}>
+                    <Card bg="light" style={{ width: '20rem' }}>
                         <Card.Header>
                             <Container className="text-center">
                                 <Row>

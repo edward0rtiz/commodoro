@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {InputGroup, FormControl} from 'react-bootstrap' ;
+import './SearchBar.scss';
 
 class SearchBar extends Component{
   render () {
