@@ -19,7 +19,6 @@ function HeaderConfig(props) {
             <button onClick={LoginRegHandler} className="btn-cog"><i className="fa fa-user-circle"/></button>
 =======
             <button onClick={LoginRegHandler} className="btn-user-circle"><i className="fa fa-user-circle"/></button>
->>>>>>> e337c743b19f5193144a64cd7d40f189c53dc8d6
             {/* <button onClick={MobileMenuHandler} className="btn-menu d-lg-none"><i className="fa fa-bars"/></button> */}
         </div>
     );
