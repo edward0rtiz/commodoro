@@ -12,16 +12,14 @@ const Education = ({teamMember}) => {
                     <div className="member-education mem-achieve-item">
                         <SectionTitle
                             heading={'Education'}
-                            text="Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                            itate non vident, similique suntculpa modi tempora incidunt ut labore et dolor am
-                            aera boluptatum deleniti corrupti."
+                            text="In 1994 Carlos Diaz decided to go back agin to its roots and dedicate his life into farming."
                         />
                     </div>
                 </div>
 
                 <div className="col-12">
                     <div className="education-content-wrap mt-60">
-                        <TimelineWrap icon={'graduation-cap'}>
+                        <TimelineWrap icon={'coffee'}>
                             {
                                 education.map(educationItem=>(
                                     <Timeline
