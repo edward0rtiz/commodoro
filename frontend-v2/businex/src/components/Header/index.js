@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Logo from './Logo'
-import Navbar from './Navbar/Navbar'
+// import Navbar from './Navbar/Navbar'
+import SearchBar from './SearchBar/SearchBar.js';
 import HeaderConfig from './HeaderConfig'
 
 class Header extends Component{
@@ -30,7 +31,7 @@ class Header extends Component{
 
                         <div className="col-lg-7 d-none d-lg-block">
                             <div className="navigation-area mt-lg-3">
-                                {/* <Navbar /> */}
+                                <SearchBar />
                             </div>
                         </div>
 
