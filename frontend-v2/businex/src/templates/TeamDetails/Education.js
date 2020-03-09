@@ -11,7 +11,7 @@ const Education = ({teamMember}) => {
                 <div className="col-xl-6 m-auto text-center">
                     <div className="member-education mem-achieve-item">
                         <SectionTitle
-                            heading={'Education'}
+                            heading={'History'}
                             text="In 1994 Carlos Diaz decided to go back agin to its roots and dedicate his life into farming."
                         />
                     </div>
