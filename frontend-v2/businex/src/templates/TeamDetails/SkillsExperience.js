@@ -13,8 +13,7 @@ const SkillsExperience = ({teamMember, coffeData}) => {
                         <h4>Coffee Features</h4>
                     <div className="skill-bar-wrap mt-40 mt-sm-30">
                         <SkillRadar data={coffeData}/>
-                            {/* <SkillRadar />
-                            {
+                            {/* {
                                 skills.map(skill=>(
                                     <SkillBar key={skill.no} title={skill.title} skillPercent={skill.percentage}/>
                                 ))
