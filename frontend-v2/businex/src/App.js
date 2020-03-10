@@ -28,7 +28,7 @@ const App = () => {
             <ScrollToTop>
                 <Switch>
                     <Route exact path={`${process.env.PUBLIC_URL + '/'}`} component={Demo}/>
-                    {/* <Route exact path={`${process.env.PUBLIC_URL + '/home-one'}`} component={HomeOne}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/home-one'}`} component={HomeOne}/>
                     <Route exact path={`${process.env.PUBLIC_URL + '/home-two'}`} component={HomeTwo}/>
                     <Route exact path={`${process.env.PUBLIC_URL + '/services'}`} component={Service}/>
                     <Route path={`${process.env.PUBLIC_URL + '/service/:serviceID'}`} component={ServiceDetails}/>
@@ -42,12 +42,12 @@ const App = () => {
                            component={BlogListLeftSidebar}/>
                     <Route exact path={`${process.env.PUBLIC_URL + "/blog-list-right-sidebar"}`}
                            component={BlogListRightSidebar}/>
-                    <Route path={`${process.env.PUBLIC_URL + "/blog/:blogID"}`} component={BlogDetailsPage}/> */}
+                    <Route path={`${process.env.PUBLIC_URL + "/blog/:blogID"}`} component={BlogDetailsPage}/>
                     <Route exact path={`${process.env.PUBLIC_URL + "/team"}`} component={Team}/>
                     <Route path={`${process.env.PUBLIC_URL + "/team-member/:teamID"}`} component={TeamDetails}/>
-                    {/* <Route exact path={`${process.env.PUBLIC_URL + "/about"}`} component={About}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + "/about"}`} component={About}/>
                     <Route exact path={`${process.env.PUBLIC_URL + "/contact"}`} component={Contact}/>
-                    <Route exact component={Error404}/> */}
+                    <Route exact component={Error404}/>
                 </Switch>
             </ScrollToTop>
         </Router>
