@@ -3,8 +3,8 @@ import TimelineWrap from "../../components/Timeline";
 import Timeline from "../../components/Timeline/TimelineItem";
 import SectionTitle from "../../components/UI/SectionTitle";
 
-const Education = ({teamMember}) => {
-    const {education} = teamMember;
+const Education = ({farm}) => {
+    const {history} = farm;
     return (
         <div className="member-details-bottom sm-top-wt">
             <div className="row mtn-50">
@@ -21,13 +21,13 @@ const Education = ({teamMember}) => {
                     <div className="education-content-wrap mt-60">
                         <TimelineWrap icon={'coffee'}>
                             {
-                                education.map(educationItem=>(
+                                history.map(historyItem=>(
                                     <Timeline
-                                        key={educationItem.no}
-                                        degree={educationItem.degree}
-                                        institute={educationItem.institute}
-                                        duration={educationItem.duration}
-                                        comment={educationItem.comment}
+                                        key={historyItem.no}
+                                        degree={historyItem.milestone}
+                                        institute={historyItem.location}
+                                        duration={historyItem.duration}
+                                        comment={historyItem.comment}
                                     />
                                 ))
                             }

@@ -1,6 +1,6 @@
 import React from 'react';
-const MemberInfo = ({teamMember}) => {
-    const {profilePic,name,designation,bio,socials,address,phone,email,website} = teamMember;
+const MemberInfo = ({farm}) => {
+    const {profilePic,name,userName,bio,socials,address,phone,email,website} = farm;
     return (
         <div className="member-details-top">
             <div className="row">
@@ -13,7 +13,7 @@ const MemberInfo = ({teamMember}) => {
                 <div className="col-md-7 ml-auto">
                     <div className="member-desc">
                         <h2>{name}</h2>
-                        <h5>{designation}</h5>
+                        <h5>{userName}</h5>
                         <p dangerouslySetInnerHTML={{__html: bio}}/>
 
                         <div className="member-social-icons mt-25">
