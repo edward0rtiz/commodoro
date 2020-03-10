@@ -3,7 +3,8 @@ import PageWrapper from "../../components/PageWrapper";
 import MemberInfo from "./MemberInfo";
 
 import { Row } from 'react-bootstrap';
-import teamData from '../../data/Team/home-one'
+import teamData from '../../data/Team/home-one';
+import coffeData from '../../data/Team/features'
 import SkillsExperience from "./SkillsExperience";
 import Education from "./Education";
 import PageHeader from "../../components/PageHeader";
@@ -24,7 +25,7 @@ const TeamDetailsPage = () => {
                 <Row>
                     <div className="col-8">
                         <MemberInfo teamMember={teamMember}/>
-                        <SkillsExperience teamMember={teamMember}/>
+                        <SkillsExperience teamMember={teamMember} coffeData={coffeData}/>
                         <Education teamMember={teamMember}/>
                     </div>
                     <div className="col-4">

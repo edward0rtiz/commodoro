@@ -1,8 +1,9 @@
 import React from 'react';
 import SkillBar from "../../components/SkillBar";
+import SkillRadar from "../../components/SkillRadar";
 import Experience from "../../components/Experience";
 
-const SkillsExperience = ({teamMember}) => {
+const SkillsExperience = ({teamMember, coffeData}) => {
     const {skills,experiences} = teamMember;
     return (
         <div className="member-details-middle sm-top-wt">
@@ -10,15 +11,17 @@ const SkillsExperience = ({teamMember}) => {
                 <div className="col-lg-6">
                     <div className="skill-experience-area mem-achieve-item">
                         <h4>Coffee Features</h4>
-                        <div className="skill-bar-wrap mt-40 mt-sm-30">
+                    <div className="skill-bar-wrap mt-40 mt-sm-30">
+                        <SkillRadar data={coffeData}/>
+                            {/* <SkillRadar />
                             {
                                 skills.map(skill=>(
                                     <SkillBar key={skill.no} title={skill.title} skillPercent={skill.percentage}/>
                                 ))
-                            }
-                        </div>
+                            } */}
                     </div>
                 </div>
+            </div>
 
                 <div className="col-lg-6">
                     <div className="my-history-area mem-achieve-item">

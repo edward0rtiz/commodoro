@@ -6,9 +6,9 @@ import { Button } from 'react-bootstrap'
 const StickyBar = (props) => {
     return (
         <div>
-            <div class="container-fluid">
-                <div class="sidebar-item">
-                    <div class="box-hightlight">
+            <div className="container-fluid">
+                <div className="sidebar-item">
+                    <div className="box-hightlight">
                     <Card bg="light" style={{ width: '20rem' }}>
                         <Card.Header>
                             <Container className="text-center">
@@ -43,11 +43,11 @@ const StickyBar = (props) => {
                                 </Row>
                             </Container>
                             </Card.Text>
-                            <Button variant="link" class="text-right">Add to cart</Button>
-                            <Button className="order-button" variant="success" class="btn-flat" size="md" block active>
+                            <Button variant="link" className="text-right">Add to cart</Button>
+                            <Button variant="success" className="btn-flat order-button" size="md" block active>
                                 Order Sample
                             </Button>
-                            <Button className="order-button" variant="secondary" class="btn-flat" size="md" block active>
+                            <Button variant="secondary" className="btn-flat order-button" size="md" block active>
                                 Contact Seller
                             </Button>
                         </Card.Body>
