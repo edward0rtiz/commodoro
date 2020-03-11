@@ -38,12 +38,30 @@
 
   }
     
-.button-primary {
-    background-color: gold;
-    color: white;
-    border-color: #2F3E48;
+// .button-primary {
+//     background-color: gold;
+//     color: white;
+//     border-color: #2F3E48;
+// }
+
+.btn-sticky {
+  border-radius: 100px !important;
+  max-width: 70%;
+  padding: .8rem .5rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
 }
 
-.btn, .order-button {
-  border: 2rem !important;
+.btn-sticky .main, .btn-success:not(:disabled):not(.disabled).active {
+  background-color: #0b7544 !important;
+  border-color: #0b7544 !important;
+}
+
+.button-order-wrapper {
+  justify-content: center;
+}
+
+.value-result {
+  font-weight: bold;
+  color: grayscale($color: #414141);
 }
