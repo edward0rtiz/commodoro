@@ -1,0 +1,111 @@
+{
+	"user": 2,
+	"farmName": "Las Margaritas",
+	"bio": "The altitude ranges from 1200 to 1800 meters above sea level (masl) with many of the farms we buy from lying within the 1400 to 1800-meter range. Elsewhere in Colombia, the lower part of this range could potentially produce uninteresting, flat coffees. Coffees produced at higher elevations are typically denser and are therefore appreciated more by specialty coffee professionals. Typically, an increase of elevation means an increase in perceived acidity in the cup. This is potentially in part due to an increase in exposure to UV radiation, but mostly caused by the larger diurnal swings that happen at higher elevations. The cooler nights that occur at higher elevations lead to slower cherry maturation, which leads to sweeter, more complex cups.",
+	"address": "Km 15 Vía Cachipay - Vereda Guayabal",
+	"country": "Colombia",
+	"region": "Latin America",
+	"phone": "+57 3003838123",
+	"email": "carlos@diaz.com",
+	"facebook": "carlosdiaz",
+	"twitter": "carlosdiaz",
+	"linkedin": "carlosdiaz",
+	"instagram": "carlosdiaz",
+	"farm_product": [{
+		"coffeeName": "Caturra LT 001",
+		"description": "Caturra",
+		"price": 7,
+		"variety": "Caturra",
+		"processing": "Honey washed",
+		"crop_year": 2020
+	}],
+	"farm_feature": [{
+			"id": 1,
+			"title": "Fragance",
+			"percentage": 70
+		},
+		{
+			"id": 2,
+			"title": "Flavor",
+			"percentage": 75
+		},
+		{
+			"id": 3,
+			"title": "Aftertaste",
+			"percentage": 80
+		},
+		{
+			"id": 4,
+			"title": "Acidity",
+			"percentage": 85
+		},
+		{
+			"id": 5,
+			"title": "Body",
+			"percentage": 85
+		},
+		{
+			"id": 6,
+			"title": "Uniformity",
+			"percentage": 90
+		},
+		{
+			"id": 7,
+			"title": "Balance",
+			"percentage": 92
+		},
+		{
+			"id": 8,
+			"title": "Clean cup",
+			"percentage": 86
+		},
+		{
+			"id": 9,
+			"title": "Sweetness",
+			"percentage": 75
+		},
+		{
+			"id": 10,
+			"title": "Overall",
+			"percentage": 86
+		}
+	],
+	"farm_certificate": [{
+			"designation": "Rain Forest Alliance",
+			"comment": "Certification of standard in sustainable farms"
+		},
+		{
+			"designation": "JAS",
+			"comment": "Certification of organic coffee for exports in Japan"
+		},
+		{
+			"designation": "UTZ",
+			"comment": "Certification of sustainable coffee farm"
+		}
+	],
+	"farm_history": [{
+			"location": "Cachipay - Cundinamarca",
+			"milestone": "Farm Las Margaritas is born",
+			"duration": "MAY 1995",
+			"comment": "Carlos Diaz build a small house in an area of 7 hectares to harvest coffee and tangerine.."
+		},
+		{
+			"location": "Cachipay - Cundinamarca",
+			"milestone": "First harvest of Caturra",
+			"duration": "JUN 1996",
+			"comment": "With a total of 3 hectares Las Margaritas harvested its first batch of coffee."
+		},
+		{
+			"location": "Cachipay - Cundinamarca",
+			"milestone": "First export to USA",
+			"duration": "OCT 2002",
+			"comment": "A first batch of 20 bags of 50kg were exported to USA"
+		},
+		{
+			"location": "Cachipay - Cundinamarca",
+			"milestone": "Las Margaritas coffee obtains Rain Forest certificate",
+			"duration": "APR 2008",
+			"comment": "The farm obtains the Rain Forest certification."
+		}
+	]
+}
