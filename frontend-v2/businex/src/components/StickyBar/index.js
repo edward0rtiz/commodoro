@@ -3,6 +3,7 @@ import "./StickyBar.scss"
 import { Card, Row, Col, Container } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
+
 const StickyBar = (props) => {
     return (
         <div>
