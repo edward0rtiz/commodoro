@@ -82,6 +82,7 @@
   .skill-bar-wrap, .history-content-wrap {
     @media #{$xl-device} {
       max-width: 75%;
+      height: 20rem;
     }
   }
 

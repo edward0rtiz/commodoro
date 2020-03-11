@@ -4,6 +4,7 @@ import MemberInfo from "./MemberInfo";
 
 import { Row } from 'react-bootstrap';
 import farmData from '../../data/Team/home-one'
+import coffeData from '../../data/Team/features'
 import SkillsExperience from "./SkillsExperience";
 import Education from "./Education";
 import PageHeader from "../../components/PageHeader";
@@ -24,7 +25,7 @@ const TeamDetailsPage = () => {
                 <Row>
                     <div className="col-8">
                         <MemberInfo farm={farm}/>
-                        <SkillsExperience farm={farm}/>
+                        <SkillsExperience farm={farm} coffeData={coffeData}/>
                         <Education farm={farm}/>
                     </div>
                     <div className="col-4">

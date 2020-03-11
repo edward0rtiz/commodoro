@@ -1,0 +1,22 @@
+[
+    {
+      "taste": "fruity",
+      "level": 30
+    },
+    {
+      "taste": "bitter",
+      "level": 61
+    },
+    {
+      "taste": "heavy",
+      "level": 29
+    },
+    {
+      "taste": "strong",
+      "level": 56
+    },
+    {
+      "taste": "sunny",
+      "level": 40
+    }
+  ]
