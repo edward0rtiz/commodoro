@@ -28,8 +28,7 @@ class Certificate(models.Model):
     Arguments:
         models {model} -- Built in Django model
     """
-    farm = models.ForeignKey(
-        Farm, on_delete=models.CASCADE, related_name='farm_certificate')
+    farm = models.ForeignKey(Farm, on_delete=models.CASCADE, related_name='farm_certificate')
     designation = models.CharField(max_length=50)
     comment = models.TextField()
 
@@ -40,8 +39,7 @@ class History(models.Model):
     Arguments:
         models {model} -- Built in Django model
     """
-    farm = models.ForeignKey(
-        Farm, on_delete=models.CASCADE, related_name='farm_history')
+    farm = models.ForeignKey(Farm, on_delete=models.CASCADE, related_name='farm_history')
     location = models.CharField(max_length=100)
     milestone = models.CharField(max_length=100)
     duration = models.CharField(max_length=25)
@@ -54,6 +52,5 @@ class Picture(models.Model):
     Arguments:
         models {model} -- Built in Django model
     """
-    farm = models.ForeignKey(
-        Farm, on_delete=models.CASCADE, related_name='farm_picture')
+    farm = models.ForeignKey(Farm, on_delete=models.CASCADE, related_name='farm_picture')
     image = models.ImageField(default='default.jpg', upload_to='farms')
