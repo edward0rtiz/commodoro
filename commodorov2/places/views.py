@@ -6,20 +6,11 @@ from .serializers import *
 
 class FarmsListView(generics.ListCreateAPIView):
     queryset = Farm.objects.all()
-    serializer_class = FarmListSerializer
+    serializer_class = FarmSerializer
 
 
 class FarmsView(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = FarmDetailSerializer
-    queryset = Farm.objects.all()
-
-class FarmsDetailListView(generics.ListCreateAPIView):
-    queryset = Farm.objects.all()
-    serializer_class = FarmListSerializer
-
-
-class FarmsDetailView(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = FarmDetailSerializer
+    serializer_class = FarmSerializer
     queryset = Farm.objects.all()
 
 
@@ -41,5 +32,3 @@ class CertificatesListView(generics.ListCreateAPIView):
 class CertificatesView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CertificateSerializer
     queryset = Certificate.objects.all()
-
-

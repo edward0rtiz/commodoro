@@ -14,6 +14,6 @@ class Product(models.Model):
 
 
 class Feature(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product_feature')
+    farm = models.ForeignKey(Farm, on_delete=models.CASCADE, related_name='farm_feature')
     title = models.CharField(max_length=50)
     percentage = models.IntegerField()
