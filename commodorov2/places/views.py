@@ -22,3 +22,13 @@ class PicturesListView(generics.ListCreateAPIView):
 class PicturesView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PictureSerializer
     queryset = Picture.objects.all()
+
+
+class CertificatesListView(generics.ListCreateAPIView):
+    queryset = Certificate.objects.all()
+    serializer_class = CertificateSerializer
+
+
+class CertificatesView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = CertificateSerializer
+    queryset = Certificate.objects.all()

@@ -3,13 +3,7 @@ from places.models import Farm
 
 
 class Product(models.Model):
-    """Some information about the product
-
-    Arguments:
-        models {model} -- Built in Django Model
-    """
-    farm = models.ForeignKey(
-        Farm, on_delete=models.CASCADE, related_name='farm_product')
+    farm = models.ForeignKey(Farm, on_delete=models.CASCADE, related_name='farm_product')
     coffeeName = models.CharField(max_length=50)
     description = models.TextField()
     price = models.FloatField()
@@ -20,12 +14,6 @@ class Product(models.Model):
 
 
 class Feature(models.Model):
-    """Model for fill coffee features
-
-    Arguments:
-        models {model} -- Built in Django Model
-    """
-    product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name='product_feature')
+    farm = models.ForeignKey(Farm, on_delete=models.CASCADE, related_name='farm_feature')
     title = models.CharField(max_length=50)
     percentage = models.IntegerField()

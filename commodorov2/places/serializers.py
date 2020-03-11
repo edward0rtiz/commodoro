@@ -24,32 +24,40 @@ class FeatureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feature
         fields = (
-            'product',
             'id',
+            'farm',
             'title',
             'percentage',
         )
-        read_only_fields = ('product',)
+        read_only_fields = ('farm',)
+
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    product_feature = FeatureSerializer(many=True)
-
+    # product_feature = FeatureSerializer(many=True)
     class Meta:
         model = Product
         fields = (
-            'farm',
             'id',
+            'farm',
             'coffeeName',
             'description',
             'price',
             'variety',
             'processing',
             'crop_year',
-            'product_feature',
+            # 'product_feature',
         )
-        read_only_fields = ('farm',)
+        read_only_fields = ('farm', )
 
+
+"""    def create(self, validated_data):
+        features_data = validated_data.pop('product_feature')
+        product_instance = Product.objects.create(**validated_data)
+
+        for feature_data in features_data:
+            Product.objects.create(sdasd=product_instance, **feature_data)
+"""
 
 # -------- Serialize the place appends ---------------------
 
@@ -91,12 +99,11 @@ class HistorySerializer(serializers.ModelSerializer):
 
 
 # --------- Serialize farm with all its appends -------------
-
-
 class FarmSerializer(serializers.ModelSerializer):
     """ Farm serialisation, nesting all important fields
         to the json """
     farm_product = ProductSerializer(many=True)
+    farm_feature = FeatureSerializer(many=True)
     farm_certificate = CertificateSerializer(many=True)
     farm_history = HistorySerializer(many=True)
     # farm_picture = PictureSerializer(many=True)
@@ -118,6 +125,7 @@ class FarmSerializer(serializers.ModelSerializer):
             'linkedin',
             'instagram',
             'farm_product',
+            'farm_feature',
             'farm_certificate',
             'farm_history',
         )
@@ -125,7 +133,9 @@ class FarmSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         """ Modify Create for be able to create coffee, and
                 pictures instances in the farms view """
+        # feature_data = validated_data.pop('product_feature')
         products_data = validated_data.pop('farm_product')
+        features_data = validated_data.pop('farm_feature')
         certificates_data = validated_data.pop('farm_certificate')
         histories_data = validated_data.pop('farm_history')
         # picture_data = validated_data.pop('farm_picture')
@@ -133,38 +143,11 @@ class FarmSerializer(serializers.ModelSerializer):
 
         for product_data in products_data:
             Product.objects.create(farm=farm_instance, **product_data)
+        for feature_data in features_data:
+            Feature.objects.create(farm=farm_instance, **feature_data)
         for certificate_data in certificates_data:
             Certificate.objects.create(farm=farm_instance, **certificate_data)
         for history_data in histories_data:
             History.objects.create(farm=farm_instance, **history_data)
 
         return farm_instance
-
-    def update(self, instance, validated_data):
-        """Update the instance of Farm, and its linked products """
-        coffees_data = validated_data.pop('farm_coffee')
-        coffees = (instance.farm_coffee).all()
-        coffees = list(coffees)
-        instance.farm_name = validated_data.get(
-            'farm_name', instance.farm_name)
-        instance.owner_name = validated_data.get(
-            'owner_name', instance.owner_name)
-        instance.description = validated_data.get(
-            'description', instance.description)
-        instance.region = validated_data.get('region', instance.region)
-        instance.country = validated_data.get('country', instance.country)
-
-        for coffee_data in coffees_data:
-            coffee = coffees.pop(0)
-            coffee.name = coffee_data.get('name', coffee.name)
-            coffee.description = coffee_data.get(
-                'description', coffee.description)
-            coffee.price = coffee_data.get('price', coffee.price)
-            coffee.variety = coffee_data.get('variety', coffee.variety)
-            coffee.processing = coffee_data.get(
-                'processing', coffee.processing)
-            coffee.crop_year = coffee_data.get(
-                'crop_year', coffee.crop_year)
-            coffee.couping_score = coffee_data.get(
-                'couping_score', coffee.couping_score)
-        return instance
