@@ -57,7 +57,7 @@ class TeamDetailsPage extends Component {
         return (
             <Fragment>
                 <PageHeader
-                    bgImg={require('../../assets/img/page-header.jpg')}
+                    bgImg={require('../../assets/img/farms/headers/page-header.jpg')}
                     title={this.state.farmObj.farmName}
                     content={userName}
                 />
