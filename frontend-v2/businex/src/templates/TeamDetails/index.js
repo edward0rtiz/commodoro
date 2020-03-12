@@ -52,7 +52,7 @@ class TeamDetailsPage extends Component {
         const memberID = new URLSearchParams(window.location.search).get("id");
         const farmUnit = farmData.find(member=> member.id === parseInt(memberID));
         const priceVal = this.state.coffeePrice;
-        const userName = this.state.usrObj.first_name + this.state.usrObj.last_name
+        const userName = this.state.usrObj.first_name + ' ' + this.state.usrObj.last_name
         return (
             <Fragment>
                 <PageHeader
