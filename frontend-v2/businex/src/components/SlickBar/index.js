@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Pictures from './Slide';
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
+import "./slick.css";
+import "./slick-theme.css";
+import Pictures from '../../assets/img/farms/others/Slide';
+import { Row, Col, Container } from 'react-bootstrap';
 
 export default class SlickBar extends Component {
   render() {
@@ -41,19 +42,25 @@ export default class SlickBar extends Component {
       ]
     };
     return (
-      <div>
-        <h2> Responsive </h2>
+      <Container>
+  <Row>
+    <Col>
+    <h4> Farm Pictures </h4>
         <Slider {...settings}>
         <div>
           {
             Pictures.map(pic => (
             // <p>{pic.picSrc}</p>
-            <img key={pic.id} src={require(`${pic.picSrc}`)}/>
+            <img key={pic.id} src={require(`${pic.picSrc}`)} alt="" className="img-responsive"/>
+            // <img key={pic.id} src={require('../../assets/img/farms/others/1.jpeg')} alt="" className="img-responsive"/>
+
             ))
           }
           </div>
         </Slider>
-      </div>
+    </Col>
+  </Row>
+</Container>
     );
   }
 }

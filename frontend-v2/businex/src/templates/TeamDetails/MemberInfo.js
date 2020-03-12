@@ -1,4 +1,5 @@
 import React from 'react';
+
 const MemberInfo = ({farmData, userName}) => {
     // const {address,phone,email} = farmUnit;
     const {farmName,bio,facebook,twitter,linkedin,instagram,address,phone,email} = farmData;
