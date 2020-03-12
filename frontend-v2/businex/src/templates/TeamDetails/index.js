@@ -11,7 +11,6 @@ import PageHeader from "../../components/PageHeader";
 import StickyBar from '../../components/StickyBar';
 import axios from 'axios';
 
-
 class TeamDetailsPage extends Component {
     _isMounted = false;
     constructor(props) {
@@ -77,6 +76,7 @@ class TeamDetailsPage extends Component {
             </Fragment>
         );
     }
+
 };
 
 export default TeamDetailsPage;

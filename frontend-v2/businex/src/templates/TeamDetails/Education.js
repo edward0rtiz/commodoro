@@ -21,13 +21,13 @@ const Education = ({farmUnit}) => {
                     <div className="education-content-wrap mt-60">
                         <TimelineWrap icon={'coffee'}>
                             {
-                                education.map(educationItem=>(
+                                history.map(historyItem=>(
                                     <Timeline
-                                        key={educationItem.no}
-                                        degree={educationItem.degree}
-                                        institute={educationItem.institute}
-                                        duration={educationItem.duration}
-                                        comment={educationItem.comment}
+                                        key={historyItem.no}
+                                        degree={historyItem.milestone}
+                                        institute={historyItem.location}
+                                        duration={historyItem.duration}
+                                        comment={historyItem.comment}
                                     />
                                 ))
                             }
