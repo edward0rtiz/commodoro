@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import Pictures from './Slide';
 // import "~slick-carousel/slick/slick.css"; 
 // import "~slick-carousel/slick/slick-theme.css";
 
@@ -43,29 +44,13 @@ export default class SlickBar extends Component {
       <div>
         <h2> Responsive </h2>
         <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
+        <div>
+          {
+            Pictures.map(pic => (
+            // <p>{pic.picSrc}</p>
+            <img key={pic.id} src={require(`${pic.picSrc}`)}/>
+            ))
+          }
           </div>
         </Slider>
       </div>
