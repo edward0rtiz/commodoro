@@ -10,6 +10,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^api/v1/users/$', UsersListView.as_view()),
+    url(r'^api/v1/users/(?P<pk>\d+)/$', UsersView.as_view()),
     url(r'^api/v1/farms/$', FarmsListView.as_view()),
     url(r'^api/v1/farms/(?P<pk>\d+)/$', FarmsView.as_view()),
     url(r'^api/v1/pictures/$', PicturesListView.as_view()),
