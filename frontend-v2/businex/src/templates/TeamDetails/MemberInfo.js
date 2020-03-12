@@ -7,7 +7,7 @@ const MemberInfo = ({farmData, userName}) => {
             <div className="row">
                 <div className="col-md-5">
                     <div className="member-pic mb-sm-35">
-                        <img src={require('../../assets/img/team/01.jpg')} alt={farmName}/>
+                        <img src={require('../../assets/img/users/01.jpg')} alt={farmName}/>
                     </div>
                 </div>
 
