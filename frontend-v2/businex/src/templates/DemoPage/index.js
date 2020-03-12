@@ -176,7 +176,7 @@ class DemoPage extends Component {
 
                             <div className="col-lg-4 col-md-6">
                                 <div className="demo-item">
-                                    <a href={`${process.env.PUBLIC_URL + "/team-member/bernard-arnault?id=1"}`} className="image" target="_blank" rel="noopener noreferrer">
+                                    <a href={`${process.env.PUBLIC_URL + "/farm-profile/las-margaritas?id=1"}`} className="image" target="_blank" rel="noopener noreferrer">
                                         <img src={teamDetails} alt="Demo Images"/>
                                         <i className="fa fa-long-arrow-right"/>
                                     </a>

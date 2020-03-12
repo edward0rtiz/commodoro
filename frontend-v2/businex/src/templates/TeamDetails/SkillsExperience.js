@@ -3,8 +3,8 @@ import SkillBar from "../../components/SkillBar";
 import SkillRadar from "../../components/SkillRadar";
 import Experience from "../../components/Experience";
 
-const SkillsExperience = ({farm, coffeData}) => {
-    const {coffeeFeatures,certificates} = farm;
+const SkillsExperience = ({farmUnit, coffeData}) => {
+    const {experiences} = farmUnit;
     return (
         <div className="member-details-middle sm-top-wt">
             <div className="row mtn-50">

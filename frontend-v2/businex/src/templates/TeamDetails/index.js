@@ -1,4 +1,4 @@
-import React,{ Fragment, Component } from 'react';
+import React,{Fragment, Component} from 'react';
 import PageWrapper from "../../components/PageWrapper";
 import MemberInfo from "./MemberInfo";
 
@@ -13,57 +13,70 @@ import axios from 'axios';
 
 
 class TeamDetailsPage extends Component {
+    _isMounted = false;
     constructor(props) {
-      super(props);
+        super(props);
+  
+        this.state = {
+          farmObj: {},
+          usrObj: {},
+          coffeePrice: '',
+        };
+        this.fetchAPIData = this.fetchAPIData.bind(this);
+    }
 
-      this.state = {
-        coffeePrice: '',
-        farmName: '',
-        first_name: '',
-        last_name: '',
-      };
+    fetchAPIData() {
+        const farmID = new URLSearchParams(window.location.search).get("id");
+        axios.all([
+            axios.get('http://127.0.0.1:8000/api/v1/farms/' + farmID + '/'),
+            axios.get('http://127.0.0.1:8000/api/v1/users/2/')
+        ]).then(axios.spread((farmRes, userRes) => {
+            this._isMounted && this.setState({
+                farmObj: farmRes.data,
+                usrObj: userRes.data,
+                coffeePrice: farmRes.data.farm_product[0].price,
+            })
+        })).catch(error => error);
     }
 
     componentDidMount () {
-        axios.all([
-            axios.get('http://127.0.0.1:8000/api/v1/farms/1/'),
-            axios.get('http://127.0.0.1:8000/api/v1/users/2/')
-        ])
-        .then(axios.spread((farmRes, userRes) => this.setState({
-        coffeePrice: farmRes.data.farm_product[0].price,
-        farmName: farmRes.data.farmName,
-        first_name: userRes.data.first_name,
-        last_name: userRes.data.last_name,
-    })))
-        .catch(error => error );
+        this._isMounted = true;
+        this.fetchAPIData();
     }
-    
+
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
+
     render () {
-    const memberID = new URLSearchParams(window.location.search).get("id");
-    const farm = farmData.find(member=> member.id === parseInt(memberID));
+        console.log(this.state.farmObj);
+        const memberID = new URLSearchParams(window.location.search).get("id");
+        const farmUnit = farmData.find(member=> member.id === parseInt(memberID));
+        const priceVal = this.state.coffeePrice;
+        const userName = this.state.usrObj.first_name + this.state.usrObj.last_name
         return (
             <Fragment>
                 <PageHeader
                     bgImg={require('../../assets/img/page-header.jpg')}
-                    title={this.state.farmName}
-                    content={ `${this.state.first_name} ${this.state.last_name}` }
+                    title={this.state.farmObj.farmName}
+                    content={userName}
                 />
 
                 <PageWrapper classes={'member-details-wrapper sm-top'}>
                     <Row>
                         <div className="col-8">
-                            <MemberInfo farm={farm}/>
-                            <SkillsExperience farm={farm} coffeData={coffeData}/>
-                            <Education farm={farm}/>
+                            <MemberInfo farmData={this.state.farmObj} userName={userName}/>
+                            <SkillsExperience farmUnit={farmUnit} coffeData={coffeData}/>
+                            <Education farmUnit={farmUnit}/>
                         </div>
                         <div className="col-4">
-                            <StickyBar price={this.state.coffeePrice}/>
+                            <StickyBar price={priceVal}/> 
                         </div>
                     </Row>
                 </PageWrapper>
             </Fragment>
-        )
+        );
     }
-}
+};
 
 export default TeamDetailsPage;
