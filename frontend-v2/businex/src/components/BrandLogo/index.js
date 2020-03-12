@@ -5,7 +5,7 @@ import BrandLogos from '../../data/BrandLogo/brandlogo'
 
 function BrandLogo(props) {
     const settings = {
-        slidesToShow: 4,
+        slidesToShow: 5,
         arrows: false,
         autoplay: true,
         className: "brand-logo-content",

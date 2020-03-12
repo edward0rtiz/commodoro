@@ -14,7 +14,7 @@ const PageTeamDetails = () => {
         <Fragment>
             <Header/>
             <TeamDetailsPage/>
-            <SlickBar />
+            {/* <SlickBar /> */}
             {/* <BrandLogo/> */}
             <Funfact classes="sp-top"/>
             <CallToAction/>
