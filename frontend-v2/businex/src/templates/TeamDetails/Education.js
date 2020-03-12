@@ -3,8 +3,8 @@ import TimelineWrap from "../../components/Timeline";
 import Timeline from "../../components/Timeline/TimelineItem";
 import SectionTitle from "../../components/UI/SectionTitle";
 
-const Education = ({teamMember}) => {
-    const {education} = teamMember;
+const Education = ({farmUnit}) => {
+    const {education} = farmUnit;
     return (
         <div className="member-details-bottom sm-top-wt">
             <div className="row mtn-50">
