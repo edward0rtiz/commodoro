@@ -7,13 +7,15 @@ import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
+import SlickBar from "../components/SlickBar";
 
 const PageTeamDetails = () => {
     return (
         <Fragment>
             <Header/>
             <TeamDetailsPage/>
-            <BrandLogo/>
+            <SlickBar />
+            {/* <BrandLogo/> */}
             <Funfact classes="sp-top"/>
             <CallToAction/>
             <Footer/>

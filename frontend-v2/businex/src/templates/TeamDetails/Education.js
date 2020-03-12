@@ -4,7 +4,7 @@ import Timeline from "../../components/Timeline/TimelineItem";
 import SectionTitle from "../../components/UI/SectionTitle";
 
 const Education = ({farmUnit}) => {
-    const {education} = farmUnit;
+    const {history} = farmUnit;
     return (
         <div className="member-details-bottom sm-top-wt">
             <div className="row mtn-50">
