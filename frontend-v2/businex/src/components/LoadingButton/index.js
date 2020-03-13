@@ -1,4 +1,4 @@
-import React, {useState, useEffect, render} from 'react';
+import React, {useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import "./LoadingButton.scss"
 
