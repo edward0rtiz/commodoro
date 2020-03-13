@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "picSrc": "./1.jpeg",
+      "URL": "/"
+    },
+    {
+      "id": 2,
+      "picSrc": "brand-logo/02.png",
+      "URL": "/"
+    },
+    {
+      "id": 3,
+      "picSrc": "brand-logo/03.png",
+      "URL": "/"
+    }
+  ]

@@ -1,6 +1,7 @@
 {
 	"user": 2,
 	"farmName": "Las Margaritas",
+	"profilePic": "http://127.0.0.1:8000/media/farms/1.jfif",
 	"bio": "The altitude ranges from 1200 to 1800 meters above sea level (masl) with many of the farms we buy from lying within the 1400 to 1800-meter range. Elsewhere in Colombia, the lower part of this range could potentially produce uninteresting, flat coffees. Coffees produced at higher elevations are typically denser and are therefore appreciated more by specialty coffee professionals. Typically, an increase of elevation means an increase in perceived acidity in the cup. This is potentially in part due to an increase in exposure to UV radiation, but mostly caused by the larger diurnal swings that happen at higher elevations. The cooler nights that occur at higher elevations lead to slower cherry maturation, which leads to sweeter, more complex cups.",
 	"address": "Km 15 Vía Cachipay - Vereda Guayabal",
 	"country": "Colombia",
