@@ -10,7 +10,7 @@ const ContactPage = () => {
                     <div className="row">
                         <div className="col-lg-8">
                             <div className="contact-form-area contact-method">
-                                <h3>Send us a Message</h3>
+                                <h3>Fill the information of your Farm</h3>
                                 <From/>
                             </div>
                         </div>
@@ -18,9 +18,9 @@ const ContactPage = () => {
                         <div className="col-lg-4">
                             <div className="contact-information contact-method">
                                 <div className="contact-info-con">
-                                    <h3>Contact Info</h3>
+                                    <h3>Remember</h3>
                                     <ContactInfo
-                                        address="2005 Stokes Isle Apartment <br/>896, Washington 10010, USA <br/>https://example.com <br/>(+68) 120034509"
+                                        address="“We do not inherit the Earth from our ancestors; we borrow it from our children."
                                     />
                                 </div>
                             </div>
