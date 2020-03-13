@@ -4,7 +4,7 @@ import SkillRadar from "../../components/SkillRadar";
 import Experience from "../../components/Experience";
 
 const SkillsExperience = ({farmUnit, coffeData}) => {
-    const {experiences} = farmUnit;
+    const {certificates} = farmUnit;
     return (
         <div className="member-details-middle sm-top-wt">
             <div className="row mtn-50">
