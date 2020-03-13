@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'commodorov2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'commodoro_v2',
+        'NAME': 'commodoro_dump',
         'USER': 'postgres',
         'PASSWORD': 'test',
         'HOST': 'localhost',

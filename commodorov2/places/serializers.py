@@ -114,6 +114,7 @@ class FarmSerializer(serializers.ModelSerializer):
             'id',
             'user',
             'farmName',
+            'profilePic',
             'bio',
             'address',
             'country',
