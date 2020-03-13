@@ -11,6 +11,10 @@ import PageHeader from "../../components/PageHeader";
 import StickyBar from '../../components/StickyBar';
 import axios from 'axios';
 
+
+const farmEndPoint = '/api/v1/farms/'
+const userEndPoint = '/api/v1/users/2/'
+
 class TeamDetailsPage extends Component {
     _isMounted = false;
     constructor(props) {
@@ -27,8 +31,8 @@ class TeamDetailsPage extends Component {
     fetchAPIData() {
         const farmID = new URLSearchParams(window.location.search).get("id");
         axios.all([
-            axios.get('http://127.0.0.1:8000/api/v1/farms/' + farmID + '/'),
-            axios.get('http://127.0.0.1:8000/api/v1/users/2/')
+            axios.get(farmEndPoint + farmID + '/'),
+            axios.get(userEndPoint)
         ]).then(axios.spread((farmRes, userRes) => {
             this._isMounted && this.setState({
                 farmObj: farmRes.data,

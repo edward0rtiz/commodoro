@@ -134,6 +134,9 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_ALLOW_ALL = True
 # CORS_ORIGIN_ALLOW_ALL = 'ALL'
 
+# Enabling credentials
+# CORS_ALLOW_CREDENTIALS = True
+
 # Specifying where to save images
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
