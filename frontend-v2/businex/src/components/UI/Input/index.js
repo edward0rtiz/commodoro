@@ -5,12 +5,14 @@ const FormInput = ({tag,type,name,placeholder,classes}) => {
         <div className="single-input-item">
             <label>
                 {(()=>{
-                    if(tag === 'input'){
+                    if(tag === 'inputrequired'){
+                        return <input type={type} name={name} placeholder={placeholder} className={classes} required />
+                    }else if(tag === 'input'){
                         return <input type={type} name={name} placeholder={placeholder} className={classes} />
                     }else if(tag === 'textarea'){
                         return  <textarea name={name} cols="30" rows="7" placeholder={placeholder} className={classes} required/>
                     }else if(tag === 'button'){
-                        return <button className={`btn-outline ${classes}`}>Send Message</button>
+                        return <button className={`btn-outline ${classes}`}>Save your changes</button>
                     }
                 })()}
             </label>
