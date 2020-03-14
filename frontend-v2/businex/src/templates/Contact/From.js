@@ -4,6 +4,8 @@ import LoadingButton from "../../components/LoadingButton/index";
 import axios from 'axios';
 
 
+const farmEndPoint = 'http://127.0.0.1:8000/api/v1/farms/'
+
 class From  extends Component {
 
     constructor(props){
@@ -92,6 +94,7 @@ class From  extends Component {
                     comment: 0,
             }],
         }
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange = event => {
@@ -102,8 +105,18 @@ class From  extends Component {
             newState[name] = value;
             return newState;
         });
-        console.log(this.state)
     };
+
+    handleSubmit = event => {
+        event.preventDefault();
+
+            axios.post(
+                farmEndPoint, { "farmObj": this.state.farmObj}
+            ).then(farmRes => {
+                console.log(farmRes);
+                console.log(farmRes.data);
+            })
+    }
 
     render () {
         return (
@@ -344,7 +357,7 @@ class From  extends Component {
                         </div>
                         <div><LoadingButton/></div>
                         <div className="col-12">
-                            <FormInput
+                            <FormInput onSubmit={this.handleSubmit}
                                 tag={'button'}
                                 classes={'btn-outline'}
                             />
