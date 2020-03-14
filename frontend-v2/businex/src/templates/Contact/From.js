@@ -4,9 +4,9 @@ import LoadingButton from "../../components/LoadingButton/index";
 import axios from 'axios';
 
 
-const farmEndPoint = 'http://127.0.0.1:8000/api/v1/farms/'
+const farmEndPoint = '/api/v1/farms/'
 
-class From  extends Component {
+class From extends Component {
 
     constructor(props){
         super(props);
@@ -111,10 +111,10 @@ class From  extends Component {
         event.preventDefault();
 
             axios.post(
-                farmEndPoint, { "farmObj": this.state.farmObj}
-            ).then(farmRes => {
-                console.log(farmRes);
-                console.log(farmRes.data);
+                farmEndPoint, { "farmObj": this.From.state}
+            ).then(res => {
+                console.log(res);
+                console.log(res.data);
             })
     }
 
@@ -127,7 +127,7 @@ class From  extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farmName'} placeholder={'Farm Name *'} value={this.state.farmName} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'farmName'} placeholder={'Farm Name *'} value={this.state.farmName} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
 
@@ -135,42 +135,42 @@ class From  extends Component {
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'address'} placeholder={'Address *'} value={this.state.address} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'address'} placeholder={'Address *'} value={this.state.address} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'email'} name={'email'} placeholder={'Email *'} value={this.state.email} onChange={this.handleChange}/>
+                                <input type={'email'} name={'email'} placeholder={'Email *'} value={this.state.email} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'phone'} placeholder={'Phone No *'} value={this.state.phone} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'phone'} placeholder={'Phone No *'} value={this.state.phone} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'country'} placeholder={'Country *'} value={this.state.country} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'country'} placeholder={'Country *'} value={this.state.country} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'region'} placeholder={'Region *'} value={this.state.region} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'region'} placeholder={'Region *'} value={this.state.region} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="form-message" >
                                 <label>
-                                <textarea name={'bio'} cols="30" rows="7" placeholder={'Describe Your Farm *'} value={this.state.bio} onChange={this.handleChange} required/>
+                                <textarea name={'bio'} cols="30" rows="7" placeholder={'Describe Your Farm *'} value={this.state.bio} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
@@ -178,28 +178,28 @@ class From  extends Component {
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'facebook'} placeholder={'Facebook link'} value={this.state.facebook} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'facebook'} placeholder={'Facebook link'} value={this.state.facebook} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'twitter'} placeholder={'Twitter link'} value={this.state.twitter} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'twitter'} placeholder={'Twitter link'} value={this.state.twitter} onChange={this.handleChange}  onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'linkedin'} placeholder={'Linked link'} value={this.state.linkedin} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'linkedin'} placeholder={'Linked link'} value={this.state.linkedin} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'instagram'} placeholder={'Instagram link'} value={this.state.instagram} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'instagram'} placeholder={'Instagram link'} value={this.state.instagram} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
@@ -207,35 +207,35 @@ class From  extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'coffeeName'} placeholder={'Coffee Name *'} value={this.state.coffeeName} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'coffeeName'} placeholder={'Coffee Name *'} value={this.state.coffeeName} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'description'} placeholder={'Describe your coffee in less than 10 words *'} value={this.state.description} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'description'} placeholder={'Describe your coffee in less than 10 words *'} value={this.state.description} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'price'} placeholder={'Price *'} value={this.state.price} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'price'} placeholder={'Price *'} value={this.state.price} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'variety'} placeholder={'What is the Variety of your Coffee *'} value={this.state.variety} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'variety'} placeholder={'What is the Variety of your Coffee *'} value={this.state.variety} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'processing'} placeholder={'What is the Process of your Coffee *'} value={this.state.processing} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'processing'} placeholder={'What is the Process of your Coffee *'} value={this.state.processing} onChange={this.handleChange} onSubmit={this.handleSubmit} required/>
                                 </label>
                             </div>
                         </div>
@@ -243,70 +243,70 @@ class From  extends Component {
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Fragrance'} value={this.state.farm_feature[0].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Fragrance'} value={this.state.farm_feature[0].percentage}  onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Flavor'} value={this.state.farm_feature[1].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Flavor'} value={this.state.farm_feature[1].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Aftertaste'} value={this.state.farm_feature[2].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Aftertaste'} value={this.state.farm_feature[2].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Acidity'} value={this.state.farm_feature[3].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Acidity'} value={this.state.farm_feature[3].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Body'} value={this.state.farm_feature[4].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Body'} value={this.state.farm_feature[4].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Uniformity'} value={this.state.farm_feature[5].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Uniformity'} value={this.state.farm_feature[5].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Balance'} value={this.state.farm_feature[6].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Balance'} value={this.state.farm_feature[6].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Clean cup'} value={this.state.farm_feature[7].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Clean cup'} value={this.state.farm_feature[7].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Sweetness'} value={this.state.farm_feature[8].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Sweetness'} value={this.state.farm_feature[8].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Overall'} value={this.state.farm_feature[9].percentage} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'percentage'} placeholder={'Score your Overall'} value={this.state.farm_feature[9].percentage} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
@@ -314,14 +314,14 @@ class From  extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'designation'} placeholder={'Name your certificate'} value={this.state.farm_certificate[0].designation} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'designation'} placeholder={'Name your certificate'} value={this.state.farm_certificate[0].designation} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'comment'} placeholder={'Describe your certificate'} value={this.state.farm_certificate[0].comment} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'comment'} placeholder={'Describe your certificate'} value={this.state.farm_certificate[0].comment} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
@@ -330,34 +330,34 @@ class From  extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'location'} placeholder={'Location'} value={this.state.farm_history[0].location} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'location'} placeholder={'Location'} value={this.state.farm_history[0].location} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'milestone'} placeholder={'Milestone i.e "The Farm was created'} value={this.state.farm_history[0].milestone} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'milestone'} placeholder={'Milestone i.e "The Farm was created'} value={this.state.farm_history[0].milestone} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'duration'} placeholder={'Date (MM - YY'} value={this.state.farm_history[0].duration} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'duration'} placeholder={'Date (MM - YY'} value={this.state.farm_history[0].duration} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'comment'} placeholder={'Description'} value={this.state.farm_history[0].comment} onChange={this.handleChange}/>
+                                <input type={'textarea'} name={'comment'} placeholder={'Description'} value={this.state.farm_history[0].comment} onChange={this.handleChange} onSubmit={this.handleSubmit}/>
                                 </label>
                             </div>
                         </div>
                         <div><LoadingButton/></div>
                         <div className="col-12">
-                            <FormInput onSubmit={this.handleSubmit}
+                            <FormInput
                                 tag={'button'}
                                 classes={'btn-outline'}
                             />
