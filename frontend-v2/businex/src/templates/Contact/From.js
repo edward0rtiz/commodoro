@@ -109,14 +109,23 @@ class From extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        console.log('this state', this.From.state);
+        const form_data = new FormData ();
 
-            axios.post(
-                farmEndPoint, { "farmObj": this.From.state}
-            ).then(res => {
-                console.log(res);
-                console.log(res.data);
-            })
-    }
+        form_data.append('newState', this.Form.newState);
+
+
+            axios.post(farmEndPoint, form_data, {
+                    headers: {
+                        Accept: 'application/json',
+                        'content-type': 'multipart/form-data',
+                    }
+                })
+                    .then(res => {
+                        console.log('sucess', res.data);
+                    })
+                    .catch(err => console.log(err))
+    };
 
     render () {
         return (
