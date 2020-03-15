@@ -13,7 +13,7 @@ class From extends Component {
         this.state = {
             user: 2,
             farmName: '',
-            profilePic: 'http://127.0.0.1:3000/media/farms/1.jfif',
+            profilePic: "http://127.0.0.1:8000/media/farms/1.jfif",
             bio: '',
             address: '',
             country: '',
@@ -24,76 +24,84 @@ class From extends Component {
             twitter: '',
             linkedin: '',
             instagram: '',
-            farm_product: [{
-                coffeeName: '',
-                description: '',
-                price: '',
-                variety: '',
-                processing: '',
-                crop_year: '',
-            }],
-            farm_feature: [{
+            farm_product: [
+                {
                     id: 1,
-                    title: "Fragance",
+                    coffeeName: '',
+                    description: '',
+                    price: '',
+                    variety: '',
+                    processing: '',
+                    crop_year: '',
+                }
+            ],
+            farm_feature: [
+                {
+                    id: 1,
+                    title: '',
                     percentage: 0,
                 },
                 {
                     id: 2,
-                    title: "Flavor",
-                    percentage: 0,
+                    title: '',
+                    percentage: 75,
                 },
                 {
                     id: 3,
-                    title: "Aftertaste",
-                    percentage: 0,
+                    title: '',
+                    percentage: 80,
                 },
                 {
                     id: 4,
-                    title: "Acidity",
-                    percentage: 0,
+                    title: '',
+                    percentage: 85,
                 },
                 {
                     id: 5,
-                    title: "Body",
-                    percentage: 0,
+                    title: '',
+                    percentage: 85,
                 },
                 {
                     id: 6,
-                    title: "Uniformity",
-                    percentage: 0,
+                    title: '',
+                    percentage: 90,
                 },
                 {
                     id: 7,
-                    title: "Balance",
-                    percentage: 0,
+                    title: '',
+                    percentage: 92,
                 },
                 {
                     id: 8,
-                    title: "Clean cup",
-                    percentage: 0,
+                    title: '',
+                    percentage: 86,
                 },
                 {
                     id: 9,
-                    title: "Sweetnes",
-                    percentage: 0,
+                    title: '',
+                    percentage: 75,
                 },
                 {
                     id: 10,
-                    title: "Overall",
-                    percentage: 0,
+                    title: '',
+                    percentage: 86,
                 }
             ],
-            farm_certificate: [{
-                    designation: 0,
-                    comment: 0,
-            }],
-            farm_history: [{
-                    location: 0,
-                    milestone: 0,
-                    duration: 0,
-                    comment: 0,
-            }],
-        }
+            farm_certificate: [
+                {
+                    designation: '',
+                    comment: '',
+                }
+            ],
+            farm_history: [
+                {
+                    location: '',
+                    milestone: '',
+                    duration: '',
+                    comment: '',
+                }
+            ]
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -109,13 +117,10 @@ class From extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        console.log('this state', this.From.state);
-        const form_data = new FormData ();
-
-        form_data.append('newState', this.Form.newState);
+        console.log('this state', this.state);
 
 
-            axios.post(farmEndPoint, form_data, {
+            axios.post(farmEndPoint, {
                     headers: {
                         Accept: 'application/json',
                         'content-type': 'multipart/form-data',
@@ -128,6 +133,7 @@ class From extends Component {
     };
 
     render () {
+        console.log(this.state);
         return (
             <div className="contact-form-wrap">
                 <form id="contact-form">
@@ -366,7 +372,7 @@ class From extends Component {
                         </div>
                         <div><LoadingButton/></div>
                         <div className="col-12">
-                            <FormInput
+                            <FormInput onSubmit={this.handleSubmit}
                                 tag={'button'}
                                 classes={'btn-outline'}
                             />
