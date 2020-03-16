@@ -30,6 +30,7 @@ class TeamDetailsPage extends Component {
 
     fetchAPIData() {
         const farmID = new URLSearchParams(window.location.search).get("id");
+        console.log("HERE", farmID)
         axios.all([
             axios.get(farmEndPoint + farmID + '/'),
             axios.get(userEndPoint)
@@ -69,8 +70,8 @@ class TeamDetailsPage extends Component {
                     <Row>
                         <div className="col-8">
                             <MemberInfo farmData={this.state.farmObj} userName={userName}/>
-                            <ProductFeatures farmUnit={farmUnit} coffeData={coffeData}/>
-                            <History farmUnit={farmUnit}/>
+                            <ProductFeatures farmData={this.state.farmObj} coffeData={coffeData}/>
+                            <History farmData={this.state.farmObj}/>
                         </div>
                         <div className="col-4">
                             <StickyBar price={priceVal}/> 

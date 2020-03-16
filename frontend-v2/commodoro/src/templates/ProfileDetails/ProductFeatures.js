@@ -3,8 +3,8 @@ import React from 'react';
 import SkillRadar from "../../components/SkillRadar";
 import Certificate from "../../components/Certificate";
 
-const ProductFeatures = ({farmUnit, coffeData}) => {
-    const {certificates} = farmUnit;
+const ProductFeatures = ({farmData, coffeData}) => {
+    const {farm_certificate} = farmData;
     return (
         <div className="member-details-middle sm-top-wt">
             <div className="row mtn-50">
@@ -28,7 +28,7 @@ const ProductFeatures = ({farmUnit, coffeData}) => {
 
                         <div className="history-content-wrap how-we-works-content mt-40 mt-sm-30">
                             {
-                                certificates.map(certificate=>(
+                                farm_certificate.map(certificate=>(
                                     <Certificate
                                         key={certificate.no}
                                         designation={certificate.designation}

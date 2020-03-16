@@ -25,7 +25,7 @@ const App = () => {
                     <Route exact path={`${process.env.PUBLIC_URL + "/blog-list-left-sidebar"}`}
                            component={BlogListLeftSidebar}/>
                     <Route path={`${process.env.PUBLIC_URL + "/blog/:blogID"}`} component={BlogDetailsPage}/>
-                    <Route exact path={`${process.env.PUBLIC_URL + "/team"}`} component={Team}/>
+                    {/* <Route exact path={`${process.env.PUBLIC_URL + "/team"}`} component={Team}/> */}
                     <Route path={`${process.env.PUBLIC_URL + "/farm-profile/:farmID"}`} component={PageProfileDetails}/>
                     <Route exact path={`${process.env.PUBLIC_URL + "/about"}`} component={About}/>
                     <Route exact path={`${process.env.PUBLIC_URL + "/FarmForm"}`} component={FarmForm}/>

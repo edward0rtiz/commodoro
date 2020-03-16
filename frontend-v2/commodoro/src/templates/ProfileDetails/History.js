@@ -3,8 +3,8 @@ import TimelineWrap from "../../components/Timeline";
 import Timeline from "../../components/Timeline/TimelineItem";
 import SectionTitle from "../../components/UI/SectionTitle";
 
-const History = ({farmUnit}) => {
-    const {history} = farmUnit;
+const History = ({farmData}) => {
+    const {farm_history} = farmData;
     return (
         <div className="member-details-bottom sm-top-wt">
             <div className="row mtn-50">
@@ -21,7 +21,7 @@ const History = ({farmUnit}) => {
                     <div className="education-content-wrap mt-60">
                         <TimelineWrap icon={'coffee'}>
                             {
-                                history.map(historyItem=>(
+                                farm_history.map(historyItem=>(
                                     <Timeline
                                         key={historyItem.no}
                                         degree={historyItem.milestone}
