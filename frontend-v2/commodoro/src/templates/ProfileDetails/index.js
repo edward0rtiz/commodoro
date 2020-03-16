@@ -3,7 +3,7 @@ import PageWrapper from "../../components/PageWrapper";
 import MemberInfo from "./MemberInfo";
 
 import { Row } from 'react-bootstrap';
-import farmData from '../../data/Team/home-one';
+// import farmData from '../../data/Team/home-one';
 import coffeData from '../../data/Team/features'
 import ProductFeatures from "./ProductFeatures";
 import History from "./History";
@@ -53,9 +53,9 @@ class TeamDetailsPage extends Component {
     }
 
     render () {
-        console.log(this.state.farmObj);
+        console.log("Hereeee ---> ", this.state.farmObj);
         const memberID = new URLSearchParams(window.location.search).get("id");
-        const farmUnit = farmData.find(member=> member.id === parseInt(memberID));
+        // const farmUnit = farmData.find(member=> member.id === parseInt(memberID));
         const priceVal = this.state.coffeePrice;
         const userName = this.state.usrObj.first_name + ' ' + this.state.usrObj.last_name
         return (
@@ -70,8 +70,8 @@ class TeamDetailsPage extends Component {
                     <Row>
                         <div className="col-8">
                             <MemberInfo farmData={this.state.farmObj} userName={userName}/>
-                            <ProductFeatures farmData={this.state.farmObj} coffeData={coffeData}/>
-                            <History farmData={this.state.farmObj}/>
+                            <ProductFeatures farmData={this.state.farmObj} coffeData={coffeData} _isMounted={this._isMounted}/>
+                            <History farmData={this.state.farmObj} _isMounted={this._isMounted}/>
                         </div>
                         <div className="col-4">
                             <StickyBar price={priceVal}/> 

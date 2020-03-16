@@ -3,7 +3,7 @@ import React from 'react';
 import SkillRadar from "../../components/SkillRadar";
 import Certificate from "../../components/Certificate";
 
-const ProductFeatures = ({farmData, coffeData}) => {
+const ProductFeatures = ({farmData, coffeData, _isMounted}) => {
     const {farm_certificate} = farmData;
     return (
         <div className="member-details-middle sm-top-wt">
@@ -27,15 +27,18 @@ const ProductFeatures = ({farmData, coffeData}) => {
                         <h4>Certificates</h4>
 
                         <div className="history-content-wrap how-we-works-content mt-40 mt-sm-30">
-                            {
-                                farm_certificate.map(certificate=>(
-                                    <Certificate
-                                        key={certificate.no}
-                                        designation={certificate.designation}
-                                        icon={certificate.icon}
-                                        comment={certificate.comment}
-                                    />
-                                ))
+                            {(()=>{
+                                if(_isMounted){
+                                    return farm_certificate.map(certificate=>(
+                                        <Certificate
+                                            // key={certificate.no}
+                                            designation={certificate.designation}
+                                            icon={"team/details/date-1.jfif"}
+                                            comment={certificate.comment}
+                                        />
+                                    ))
+                                }
+                            })()
                             }
                         </div>
                     </div>
