@@ -1,20 +1,14 @@
 import { ResponsiveRadar } from '@nivo/radar';
 import React from 'react';
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
-
 const SkillRadar = ({ data }) => {
   return (
     <ResponsiveRadar
         data={data}
         keys={[ 'level' ]}
-        indexBy="taste"
+        indexBy="characteristic"
         maxValue="auto"
-        margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+        margin={{ top: 20, right: 20, bottom: 20, left: 40 }}
         curve="linearClosed"
         borderWidth={2}
         borderColor={{ from: 'color', modifiers: [] }}

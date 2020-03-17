@@ -122,14 +122,14 @@ class From extends Component {
         const name = event.target.name;
         const key = name.split(".");
         let value = event.target.value;
-        if (key.length == 3) {
+        if (key.length === 3) {
             this.setState(prevState => {
                 const newState = { ...prevState };
                 newState[key[0]][key[2]][key[1]] = parseInt(value);
                 return newState;
             });
         } else {
-            if (key[1] == "price" || key[1] == "crop_year") {
+            if (key[1] === "price" || key[1] === "crop_year") {
                 value = parseInt(value);
             }
             this.setState(prevState => {

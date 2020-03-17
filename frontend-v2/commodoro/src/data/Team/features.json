@@ -1,22 +1,22 @@
 [
     {
-      "taste": "fruity",
+      "characteristic": "Fragance",
       "level": 30
     },
     {
-      "taste": "bitter",
+      "characteristic": "bitter",
       "level": 61
     },
     {
-      "taste": "heavy",
+      "characteristic": "heavy",
       "level": 29
     },
     {
-      "taste": "strong",
+      "characteristic": "strong",
       "level": 56
     },
     {
-      "taste": "sunny",
+      "characteristic": "sunny",
       "level": 40
     }
   ]
