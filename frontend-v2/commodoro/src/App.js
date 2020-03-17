@@ -8,7 +8,7 @@ import Demo from './pages/Demo'
 import HomeTwo from './pages/HomeTwo'
 import BlogListLeftSidebar from './pages/BlogListLeftSidebar';
 import BlogDetailsPage from "./pages/BlogDetails";
-import Team from "./pages/Team";
+// import Team from "./pages/Team";
 import PageProfileDetails from "./pages/ProfileDetails";
 import LandingPage from "./pages/LandingPage";
 import FarmForm from "./pages/FarmForm";

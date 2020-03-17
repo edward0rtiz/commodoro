@@ -1,62 +1,22 @@
 [
-  {
-    "id": 1,
-    "farm": 1,
-    "title": "Fragance",
-    "percentage": 70
-},
-{
-    "id": 2,
-    "farm": 1,
-    "title": "Flavor",
-    "percentage": 75
-},
-{
-    "id": 3,
-    "farm": 1,
-    "title": "Aftertaste",
-    "percentage": 80
-},
-{
-    "id": 4,
-    "farm": 1,
-    "title": "Acidity",
-    "percentage": 85
-},
-{
-    "id": 5,
-    "farm": 1,
-    "title": "Body",
-    "percentage": 85
-},
-{
-    "id": 6,
-    "farm": 1,
-    "title": "Uniformity",
-    "percentage": 90
-},
-{
-    "id": 7,
-    "farm": 1,
-    "title": "Balance",
-    "percentage": 92
-},
-{
-    "id": 8,
-    "farm": 1,
-    "title": "Clean cup",
-    "percentage": 86
-},
-{
-    "id": 9,
-    "farm": 1,
-    "title": "Sweetness",
-    "percentage": 75
-},
-{
-    "id": 10,
-    "farm": 1,
-    "title": "Overall",
-    "percentage": 86
-}
+    {
+      "characteristic": "Fragance",
+      "level": 30
+    },
+    {
+      "characteristic": "bitter",
+      "level": 61
+    },
+    {
+      "characteristic": "heavy",
+      "level": 29
+    },
+    {
+      "characteristic": "strong",
+      "level": 56
+    },
+    {
+      "characteristic": "sunny",
+      "level": 40
+    }
   ]

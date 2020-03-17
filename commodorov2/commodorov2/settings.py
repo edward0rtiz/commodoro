@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'places',
     'products',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
