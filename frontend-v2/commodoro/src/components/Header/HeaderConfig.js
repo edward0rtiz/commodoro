@@ -7,10 +7,10 @@ function HeaderConfig(props) {
         document.querySelector('body').classList.add('fix');
     }
 
-    const MobileMenuHandler = () => {
-        const offCanvasMenu = document.querySelector('.off-canvas-menu');
-        offCanvasMenu.classList.add('active');
-    }
+    // const MobileMenuHandler = () => {
+    //     const offCanvasMenu = document.querySelector('.off-canvas-menu');
+    //     offCanvasMenu.classList.add('active');
+    // }
 
     return (
         <div className="header-action mt-lg-1 text-right">

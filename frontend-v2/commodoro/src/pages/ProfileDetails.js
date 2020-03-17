@@ -6,7 +6,7 @@ import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
-import SlickBar from "../components/SlickBar";
+// import SlickBar from "../components/SlickBar";
 
 const PageProfileDetails = () => {
     return (

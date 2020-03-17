@@ -4,7 +4,24 @@ import SkillRadar from "../../components/SkillRadar";
 import Certificate from "../../components/Certificate";
 
 const ProductFeatures = ({farmData, coffeData, _isMounted}) => {
-    const {farm_certificate} = farmData;
+    const {farm_certificate, farm_feature} = farmData;
+
+    const handelCoffeData = (farm_feature) => {
+        return farm_feature.map((feature) => {
+            const singleObj = {};
+            singleObj['characteristic'] = feature.title;
+            singleObj['level'] = feature.percentage;
+            return singleObj;
+        })
+    }
+
+    let skill;
+    if (_isMounted) {
+        skill = <SkillRadar data={handelCoffeData(farm_feature)}/>
+    } else {
+        skill = <React.Fragment/>
+    }
+
     return (
         <div className="member-details-middle sm-top-wt">
             <div className="row mtn-50">
@@ -12,12 +29,7 @@ const ProductFeatures = ({farmData, coffeData, _isMounted}) => {
                     <div className="skill-experience-area mem-achieve-item">
                         <h4>Coffee Features</h4>
                         <div className="skill-bar-wrap mt-40 mt-sm-30">
-                            <SkillRadar data={coffeData}/>
-                                {/* {
-                                    skills.map(skill=>(
-                                        <SkillBar key={skill.no} title={skill.title} skillPercent={skill.percentage}/>
-                                    ))
-                                } */}
+                            {skill}
                         </div>
                     </div>
                 </div>
