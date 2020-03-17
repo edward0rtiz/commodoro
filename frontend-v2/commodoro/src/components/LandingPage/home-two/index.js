@@ -1,7 +1,7 @@
 import React from 'react';
 import parse from "html-react-parser";
 import landingPageData from "../../../data/LandingPage/home-two";
-import landingThumb from '../../../assets/img/landingtwo.jpg'
+import landingThumb from '../../../assets/img/landingpv1.jpg'
 import {Link} from "react-router-dom";
 
 const LandingPage = () => {

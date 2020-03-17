@@ -22,7 +22,7 @@ const PageLandingPage = () => {
             <PageHeader
                 bgImg={require('../assets/img/landing.jpg')}
                 title="Commodoro"
-                content= {<h3 className="text-landing"> Welcome to the largest network of cofffee farmers </h3>}
+                content= {<h3 className="text-landing"> Welcome to the largest network of coffee farmers </h3>}
             />
             <LandingPage
                 // title={'Our Team'}
@@ -34,8 +34,8 @@ const PageLandingPage = () => {
             <Features classes={'sm-top'}/>
             <Testimonial/>
             <Team/>
-            <BrandLogo/>
-            <Funfact classes="sp-top"/>
+            {/* <BrandLogo/>
+            <Funfact classes="sp-top"/> */}
             <CallToAction/>
             <Footer/>
             <LoginRegister/>

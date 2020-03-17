@@ -4,7 +4,7 @@ import MemberInfo from "./MemberInfo";
 
 import { Row } from 'react-bootstrap';
 // import farmData from '../../data/Team/home-one';
-//import coffeData from '../../data/Team/features'
+import coffeData from '../../data/Team/features'
 import ProductFeatures from "./ProductFeatures";
 import History from "./History";
 import PageHeader from "../../components/PageHeader";
@@ -70,7 +70,7 @@ class TeamDetailsPage extends Component {
                     <Row>
                         <div className="col-8">
                             <MemberInfo farmData={this.state.farmObj} userName={userName}/>
-                            <ProductFeatures farmData={this.state.farmObj} coffeData={this.state.farmObj.farm_feature} _isMounted={this._isMounted}/>
+                            <ProductFeatures farmData={this.state.farmObj} coffeData={coffeData} _isMounted={this._isMounted}/>
                             <History farmData={this.state.farmObj} _isMounted={this._isMounted}/>
                         </div>
                         <div className="col-4">
