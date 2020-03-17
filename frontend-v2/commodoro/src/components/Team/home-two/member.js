@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const TeamMember = ({id,linkedin, profilePic,name,designation}) => {
     // const teamMemberURl = `/team-member/${name.split(' ').join('-').toLocaleLowerCase()}?id=${id}`;
     return (
-        <div className="col-sm-6 col-lg-3">
+        <div className="col-6 col-md-4">
             <div className="team-mem-item team-mem-item--2">
                 <figure className="member-pic">
                     {/* <Link to={`${process.env.PUBLIC_URL + teamMemberURl}`}> */}
