@@ -4,7 +4,7 @@ import MemberInfo from "./MemberInfo";
 
 import { Row } from 'react-bootstrap';
 // import farmData from '../../data/Team/home-one';
-import coffeData from '../../data/Team/features'
+//import coffeData from '../../data/Team/features'
 import ProductFeatures from "./ProductFeatures";
 import History from "./History";
 import PageHeader from "../../components/PageHeader";
@@ -13,7 +13,7 @@ import axios from 'axios';
 
 
 const farmEndPoint = '/api/v1/farms/'
-const userEndPoint = '/api/v1/users/2/'
+const userEndPoint = '/api/v1/users/'
 
 class TeamDetailsPage extends Component {
     _isMounted = false;
@@ -30,17 +30,17 @@ class TeamDetailsPage extends Component {
 
     fetchAPIData() {
         const farmID = new URLSearchParams(window.location.search).get("id");
-        console.log("HERE", farmID)
-        axios.all([
-            axios.get(farmEndPoint + farmID + '/'),
-            axios.get(userEndPoint)
-        ]).then(axios.spread((farmRes, userRes) => {
+        axios.get(farmEndPoint + farmID + '/')
+        .then((farmRes) => {
             this._isMounted && this.setState({
                 farmObj: farmRes.data,
-                usrObj: userRes.data,
                 coffeePrice: farmRes.data.farm_product[0].price,
-            })
-        })).catch(error => error);
+            });
+            return axios.get(userEndPoint + farmRes.data.user + '/');
+        })
+        .then((userRes) => {
+            this._isMounted && this.setState({usrObj: userRes.data});
+        }).catch(error => error);
     }
 
     componentDidMount () {
@@ -70,7 +70,7 @@ class TeamDetailsPage extends Component {
                     <Row>
                         <div className="col-8">
                             <MemberInfo farmData={this.state.farmObj} userName={userName}/>
-                            <ProductFeatures farmData={this.state.farmObj} coffeData={coffeData} _isMounted={this._isMounted}/>
+                            <ProductFeatures farmData={this.state.farmObj} coffeData={this.state.farmObj.farm_feature} _isMounted={this._isMounted}/>
                             <History farmData={this.state.farmObj} _isMounted={this._isMounted}/>
                         </div>
                         <div className="col-4">
