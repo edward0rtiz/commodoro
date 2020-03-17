@@ -97,7 +97,7 @@
   background-repeat: no-repeat;
 
   @media #{$lg-device, $xlmax-device} {
-    background-size: 675px auto;
+    background-size: 670px, auto;
   }
 
   @media #{$sm-device, $md-device} {

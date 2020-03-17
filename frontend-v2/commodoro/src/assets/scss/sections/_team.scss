@@ -45,7 +45,7 @@
       padding: 0;
       position: absolute;
       top: -15px;
-      left: -110px;
+      left: -150px;
       width: 100%;
       @include hide;
       transform: translateY(-20px);
@@ -55,7 +55,7 @@
       }
 
       &:after{
-        background-image: url('../../img/team/team-arrow.png');
+        background-image: url('../../img/team/linkedin.png');
         background-repeat: no-repeat;
         background-position: center center;
         content: '';
@@ -64,7 +64,7 @@
         transition: 0.4s;
         transition-duration: 0.8s;
         top: 100%;
-        right: -15px;
+        right: 30px;
         height: 40px;
         width: 100%;
       }
@@ -74,7 +74,7 @@
       text-align: center;
 
       img {
-        max-height: 400px;
+        max-height: 200px;
         width: auto;
         margin: auto;
       }
