@@ -11,8 +11,8 @@ const SkillRadar = ({ data }) => {
   return (
     <ResponsiveRadar
         data={data}
-        keys={[ 'level' ]}
-        indexBy="taste"
+        keys={[ 'percentage' ]}
+        indexBy="title"
         maxValue="auto"
         margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
         curve="linearClosed"
