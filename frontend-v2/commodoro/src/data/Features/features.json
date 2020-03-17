@@ -1,20 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Creative Team",
-    "text": "We have creative team, they always ready to help you.",
+    "title": "Community",
+    "text": "Our motto is to be transparent and to engage transparently with suppliers.",
     "imgSrc": "feature/01.png"
   },
   {
     "id": 2,
-    "title": "Best Service",
-    "text": "We have creative team, they always ready to help you.",
+    "title": "Reliable and Secure",
+    "text": "Soon you will expand your farm business with our innovative escrow payment so your sales are going to increase",
     "imgSrc": "feature/02.png"
   },
   {
     "id": 3,
     "title": "Online Support",
-    "text": "We have creative team, they always ready to help you.",
+    "text": "We know you will find overwhelmed by having you farm online, don't worry, we're here to help you.",
     "imgSrc": "feature/03.png"
   }
 ]

@@ -7,7 +7,7 @@ function ServiceItem(props) {
         <div className="col-sm-6 col-lg-4">
             <div className="service-item">
                 <figure className="service-thumb">
-                    <Link to={`${process.env.PUBLIC_URL + serviceURL}`}>
+                    <Link to={`${process.env.PUBLIC_URL}`}>
                         <img src={require('../../assets/img/' + props.thumb)} alt={props.title}/>
                     </Link>
 
@@ -18,7 +18,7 @@ function ServiceItem(props) {
                 <div className="service-content">
                     <div className="service-content-inner">
                         <h5>
-                            <Link to={`${process.env.PUBLIC_URL + serviceURL}`} className="stretched-link">{props.title}</Link>
+                            <Link to={`${process.env.PUBLIC_URL}`} className="stretched-link">{props.title}</Link>
                         </h5>
                         <p>{props.text}</p>
                     </div>

@@ -38,7 +38,7 @@
     }
   }
 
-  .btn-about {
+  .btn-landing {
     color: $paragraph;
     font-size: 16px;
     font-weight: 500;
@@ -91,13 +91,13 @@
 
 // Home 2 About Style
 .home-two-about-area{
-  background-color: $offWhite;
+  background-color: $white;
   //background-image: url('../img/about-2-bg.jpg');
   background-position: center right;
   background-repeat: no-repeat;
 
   @media #{$lg-device, $xlmax-device} {
-    background-size: 1100px auto;
+    background-size: 670px, auto;
   }
 
   @media #{$sm-device, $md-device} {

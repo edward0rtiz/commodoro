@@ -1,26 +1,23 @@
 [
   {
     "id": 1,
-    "name": "Lucy Farnando",
+    "name": "Edward Ortiz",
     "designation": "CEO & Founder",
-    "profilePic": "team/h-2-01.png"
+    "profilePic": "team/team_landing_page/eo.png",
+    "linkedin": "in/ortizedward/"
   },
   {
     "id": 2,
-    "name": "James Anderson",
-    "designation": "HR & Admin",
-    "profilePic": "team/h-2-02.png"
+    "name": "David Peralta",
+    "designation": "COO & Founder",
+    "profilePic": "team/team_landing_page/dp.png",
+    "linkedin": "in/david-peralta-52060a50/"
   },
   {
     "id": 3,
-    "name": "Thomas Nancy",
-    "designation": "Software Engineer",
-    "profilePic": "team/h-2-03.png"
-  },
-  {
-    "id": 4,
-    "name": "Nail Mathue",
-    "designation": "Creative Designer",
-    "profilePic": "team/h-2-04.png"
+    "name": "Carlos Molano",
+    "designation": "CTO & Founder",
+    "profilePic": "team/team_landing_page/cm.png",
+    "linkedin": "in/carlos-molano-salazar-605a6bb6/"
   }
 ]
