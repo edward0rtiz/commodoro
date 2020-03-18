@@ -2,7 +2,7 @@ import React from 'react';
 import parse from 'html-react-parser'
 
 import CallToActionData from '../../data/CallToAction/call-to-action'
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 function CallToAction() {
     return (
@@ -15,7 +15,8 @@ function CallToAction() {
                             <p>{parse(CallToActionData.text)}</p>
                         </div>
                         <div className="col-md-4 col-lg-6 text-md-right mt-sm-25">
-                            <Link to={`${process.env.PUBLIC_URL + CallToActionData.btnLink}`} className="btn-outline">{CallToActionData.btnText}</Link>
+                            {/* <Link to={`${process.env.PUBLIC_URL + CallToActionData.btnLink}`} className="btn-outline">{CallToActionData.btnText}</Link> */}
+                            <a href={"https://www.github.com/" + CallToActionData.btnLink} className="btn-outline">{CallToActionData.btnText}</a>
                         </div>
                     </div>
                 </div>

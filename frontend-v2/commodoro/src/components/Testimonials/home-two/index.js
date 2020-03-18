@@ -65,7 +65,7 @@ class Testimonial extends Component {
                                             <div className="testimonial-thumbnail-item">
                                                 <img
                                                     src={require('../../../assets/img/' + testimonial.authorThumb)}
-                                                    alt="Businex-Testimonial"/>
+                                                    alt="commodoro-Testimonial"/>
                                             </div>
                                         </div>
                                     ))
@@ -94,7 +94,7 @@ class Testimonial extends Component {
                                                 <div key={testiItem.id}>
                                                     <div className="testimonial-item testimonial-item--2">
                                                         <div className="testimonial-txt">
-                                                            <img src={quote} alt="Businex"/>
+                                                            <img src={quote} alt="commodoro"/>
                                                             <p>{testiItem.quote}</p>
                                                             <h5 className="client-name">{testiItem.author}, <span
                                                                 className="designation">{testiItem.designation}</span>

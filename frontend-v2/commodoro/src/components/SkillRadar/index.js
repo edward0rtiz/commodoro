@@ -8,7 +8,7 @@ const SkillRadar = ({ data }) => {
         keys={[ 'level' ]}
         indexBy="characteristic"
         maxValue="auto"
-        margin={{ top: 20, right: 20, bottom: 20, left: 40 }}
+        margin={{ top: 5, right: 70, bottom: 20, left: 70 }}
         curve="linearClosed"
         borderWidth={2}
         borderColor={{ from: 'color', modifiers: [] }}
