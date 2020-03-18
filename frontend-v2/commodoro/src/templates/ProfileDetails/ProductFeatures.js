@@ -28,7 +28,7 @@ const ProductFeatures = ({farmData, coffeData, _isMounted}) => {
                 <div className="col-lg-6">
                     <div className="skill-experience-area mem-achieve-item">
                         <h4>Coffee Features</h4>
-                        <div className="skill-bar-wrap mt-40 mt-sm-30">
+                        <div className="skill-bar-wrap">
                             {skill}
                         </div>
                     </div>
