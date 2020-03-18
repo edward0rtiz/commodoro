@@ -23,5 +23,4 @@ urlpatterns = [
     url(r'^api/v1/products/(?P<pk>\d+)/$', ProductsView.as_view()),
     url(r'^api/v1/certificates/$', CertificatesListView.as_view()),
     url(r'^api/v1/certificates/(?P<pk>\d+)/$', CertificatesView.as_view()),
-
 ]

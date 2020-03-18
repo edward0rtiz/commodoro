@@ -10,7 +10,7 @@ class Farm(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     farmName = models.CharField(max_length=50)
-    profilePic = models.URLField()
+    profilePic = models.ImageField(default='default.jpg', upload_to='farm_profiles')
     bio = models.TextField()
     address = models.CharField(max_length=100)
     country = models.CharField(max_length=50)
@@ -54,4 +54,4 @@ class Picture(models.Model):
         models {model} -- Built in Django model
     """
     farm = models.ForeignKey(Farm, on_delete=models.CASCADE, related_name='farm_picture')
-    image = models.URLField()
+    image = models.ImageField(default='default.jpg', upload_to='farm_pics')

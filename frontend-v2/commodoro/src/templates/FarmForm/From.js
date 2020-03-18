@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import FormInput from "../../components/UI/Input";
+import FormInput from "../../components/UI/Input";
 import LoadingButton from "../../components/LoadingButton/index";
 import axios from 'axios';
 
@@ -13,7 +13,7 @@ class From extends Component {
         this.state = {
             user: 2,
             farmName: '',
-            profilePic: "http://127.0.0.1:8000/media/farms/1.jfif",
+            profilePic: null,
             bio: '',
             address: '',
             country: '',
@@ -106,6 +106,7 @@ class From extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeList = this.handleChangeList.bind(this);
         this.appendInfo = this.appendInfo.bind(this);
+        this.handleImageChange = this.handleImageChange.bind(this);
     }
 
     handleChange = event => {
@@ -117,6 +118,12 @@ class From extends Component {
             return newState;
         });
     };
+
+    handleImageChange = event => {
+        this.setState({
+          image: event.target.files[0]
+        })
+      };
 
     handleChangeList = event => {
         const name = event.target.name;
@@ -159,7 +166,25 @@ class From extends Component {
             return newState;
         });
     };
-
+    // ----BLOG EXAMPLE---------------------------------------------------------------
+    // handleImageChange = (e) => {
+    //     this.setState({
+    //       image: e.target.files[0]
+    //     })
+    //   };
+    //   handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     console.log(this.state);
+    //     let form_data = new FormData();
+    //     form_data.append('image', this.state.image, this.state.image.name);
+    //     form_data.append('title', this.state.title);
+    //     form_data.append('content', this.state.content);
+    //     let url = 'http://localhost:8000/api/posts/';
+    //     axios.post(url, form_data, {
+    //       headers: {
+    //         'content-type': 'multipart/form-data'
+    //       }
+    //-----------------------------------------------------------------------------------
     handleSubmit = (event, farmData) => {
         event.preventDefault();
         if (farmData.farm_certificate.length > 1) {
@@ -173,7 +198,7 @@ class From extends Component {
             url: farmEndPoint,
             data: farmData,
             headers: {
-                    'content-type': 'application/json',
+                    'content-type': 'multipart/form-data',
                 }
             })
             .then(res => {
@@ -193,14 +218,23 @@ class From extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farmName'} placeholder={'Farm Name *'} value={this.state.farmName} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'farmName'} placeholder={'Farm Name *'} value={this.state.farmName} onChange={this.handleChange} />
                                 </label>
+                            </div>
+                        </div>
+                        <div className="col-sm-12">
+                            <div className="single-input-item">
+                                <label>
+                                <input type={'file'} name={'profilePic'} placeholder={'profilePic *'} value={this.state.profilePic} onChange={this.handleImageChange}  />
+                                </label>
+                                <p>Please, attach a picture of your farm</p>
+
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'address'} placeholder={'Address *'} value={this.state.address} onChange={this.handleChange} required/>
+                                <input type={'textarea'} name={'address'} placeholder={'Address *'} value={this.state.address} onChange={this.handleChange} />
                                 </label>
                             </div>
                         </div>
@@ -214,31 +248,32 @@ class From extends Component {
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'phone'} placeholder={'Phone No *'} value={this.state.phone} onChange={this.handleChange}  required/>
+                                <input type={'textarea'} name={'phone'} placeholder={'Phone No *'} value={this.state.phone} onChange={this.handleChange}  />
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'country'} placeholder={'Country *'} value={this.state.country} onChange={this.handleChange}  required/>
+                                <input type={'textarea'} name={'country'} placeholder={'Country *'} value={this.state.country} onChange={this.handleChange}  />
                                 </label>
                             </div>
                         </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'region'} placeholder={'Region *'} value={this.state.region} onChange={this.handleChange}  required/>
+                                <input type={'textarea'} name={'region'} placeholder={'Region *'} value={this.state.region} onChange={this.handleChange}  />
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="form-message" >
                                 <label>
-                                    <textarea name={'bio'} cols="60" rows="7" placeholder={'Describe Your Farm *'} value={this.state.bio} onChange={this.handleChange}  required/>
+                                    <textarea name={'bio'} cols="60" rows="7" placeholder={'Describe Your Farm *'} value={this.state.bio} onChange={this.handleChange}  />
                                 </label>
                             </div>
                         </div>
+
                         {/* -------------- SOCIAL MEDIA -------------- */}
                         <div className="col-md-8"><h5 className="font-weight-bold">Social Media Information</h5></div>
                         <div className="col-sm-6">
@@ -274,7 +309,7 @@ class From extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                    <input type={'textarea'} name={'farm_product.coffeeName'} placeholder={'Coffee Name *'} value={this.state.farm_product.coffeeName} onChange={this.handleChangeList}  required/>
+                                    <input type={'textarea'} name={'farm_product.coffeeName'} placeholder={'Coffee Name *'} value={this.state.farm_product.coffeeName} onChange={this.handleChangeList}  />
                                 </label>
                             </div>
                         </div>
@@ -288,28 +323,28 @@ class From extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farm_product.variety'} placeholder={'What is the Variety of your Coffee *'} value={this.state.farm_product.variety} onChange={this.handleChangeList}  required/>
+                                <input type={'textarea'} name={'farm_product.variety'} placeholder={'What is the Variety of your Coffee *'} value={this.state.farm_product.variety} onChange={this.handleChangeList}  />
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farm_product.processing'} placeholder={'What is the Process of your Coffee *'} value={this.state.farm_product.processing} onChange={this.handleChangeList}  required/>
+                                <input type={'textarea'} name={'farm_product.processing'} placeholder={'What is the Process of your Coffee *'} value={this.state.farm_product.processing} onChange={this.handleChangeList}  />
                                 </label>
                             </div>
                         </div>
                         <div className="col-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farm_product.price'} placeholder={'Kg Price *'} value={this.state.farm_product.price} onChange={this.handleChangeList}  required/>
+                                <input type={'textarea'} name={'farm_product.price'} placeholder={'Kg Price *'} value={this.state.farm_product.price} onChange={this.handleChangeList}  />
                                 </label>
                             </div>
                         </div>
                         <div className="col-6">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farm_product.crop_year'} placeholder={'What is the crop year? *'} value={this.state.farm_product.crop_year} onChange={this.handleChangeList}  required/>
+                                <input type={'textarea'} name={'farm_product.crop_year'} placeholder={'What is the crop year? *'} value={this.state.farm_product.crop_year} onChange={this.handleChangeList}  />
                                 </label>
                             </div>
                         </div>
