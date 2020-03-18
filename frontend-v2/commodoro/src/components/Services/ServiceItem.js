@@ -2,7 +2,8 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 function ServiceItem(props) {
-    const serviceURL = `/service/${props.title.split(' ').join('-').toLowerCase()}?id=${props.id}`
+    // const farmprofileURL = `/farm-profile/${props.title.split(' ').join('-').toLowerCase()}?id=${props.id}`
+    const farmprofileURL = `/farm-profile/${"las-margaritas"}?id=${"1"}`
     return (
         <div className="col-sm-6 col-lg-4">
             <div className="service-item">
@@ -18,7 +19,7 @@ function ServiceItem(props) {
                 <div className="service-content">
                     <div className="service-content-inner">
                         <h5>
-                            <Link to={`${process.env.PUBLIC_URL}`} className="stretched-link">{props.title}</Link>
+                            <Link to={`${process.env.PUBLIC_URL + farmprofileURL}`} className="stretched-link">{props.title}</Link>
                         </h5>
                         <p>{props.text}</p>
                     </div>

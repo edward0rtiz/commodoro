@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 const TeamMember = ({id,linkedin, profilePic,name,designation}) => {
     // const teamMemberURl = `/team-member/${name.split(' ').join('-').toLocaleLowerCase()}?id=${id}`;

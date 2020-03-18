@@ -5,7 +5,7 @@ function LogoItem(props) {
     return (
         <div className="brand-logo-item">
             <Link to={`${process.env.PUBLIC_URL + props.URL}`}>
-                <img src={require('../../assets/img/' + props.logoSrc)} alt="Businex-Logo"/>
+                <img src={require('../../assets/img/' + props.logoSrc)} alt="commodoro-Logo"/>
             </Link>
         </div>
     );
