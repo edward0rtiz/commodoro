@@ -3,7 +3,6 @@ from .models import Farm, Picture
 from rest_framework import generics
 from .serializers import *
 
-
 class FarmsListView(generics.ListCreateAPIView):
     queryset = Farm.objects.all()
     serializer_class = FarmSerializer
