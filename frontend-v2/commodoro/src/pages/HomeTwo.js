@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 
 import Header from '../components/Header'
 import Slider from '../components/Slider/home-two'
-import About from '../components/About/home-two'
+import About from '../components/LandingPage/home-two'
 import Services from '../components/Services'
 import Features from '../components/Features'
 import Testimonial from "../components/Testimonials/home-two";
