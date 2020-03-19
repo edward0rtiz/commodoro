@@ -178,22 +178,16 @@ class From extends Component {
         form_data.append('image', this.state.profilePic, this.state.profilePic.name);
         axios.post('/api/v1/pictures/', form_data, {
                 headers: {'content-type': 'multipart/form-data'}    
-            }).then(res => {
+            }).then(imgRest => {
                 this.setState({
-                    profilePic: res.data.image
+                    profilePic: imgRest.data.image
                   })
-                console.log('sucess', res.data);
-            }).then(
-                console.log("After image", this.state)
-                // axios({
-                //     method:'post',
-                //     url: farmEndPoint,
-                //     data: this.state,
-                //     headers: {
-                //             'content-type': 'application/json',
-                //         }
-                //     })
-            )
+                console.log('sucess', imgRest.data.image);
+                console.log('state', this.state);
+                return axios.post(farmEndPoint, this.state, {
+                    headers: {'content-type': 'application/json'}
+                })
+            })
             .catch(err => console.log(err));
     };
 
