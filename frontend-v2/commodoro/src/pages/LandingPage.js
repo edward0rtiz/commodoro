@@ -10,7 +10,7 @@ import Features from "../components/Features";
 import Testimonial from "../components/Testimonials/home-two";
 import Team from "../components/Team/home-two";
 import Services from "../components/Services";
-import BrandLogo from "../components/BrandLogo";
+// import BrandLogo from "../components/BrandLogo";
 //import Funfact from "../components/Funfact";
 
 import ServiceThumb from '../assets/img/about.jpg'

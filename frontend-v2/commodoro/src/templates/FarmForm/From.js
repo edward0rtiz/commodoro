@@ -11,93 +11,93 @@ class From extends Component {
         super(props);
         this.state = {
             user: 2,
-            farmName: 'a',
+            farmName: '',
             profilePic: null,
-            bio: 'a',
-            address: 'a',
-            country: 'a',
-            region: 'a',
-            phone: '1',
-            email: 'a@g.com',
-            facebook: 'a',
-            twitter: 'a',
-            linkedin: 'a',
-            instagram: 'a',
+            bio: '',
+            address: '',
+            country: '',
+            region: '',
+            phone: '',
+            email: '',
+            facebook: '',
+            twitter: '',
+            linkedin: '',
+            instagram: '',
             farm_product: [
                 {
                     id: 1,
-                    coffeeName: 'a',
-                    description: 'a',
-                    price: 15,
-                    variety: 'a',
-                    processing: 'a',
-                    crop_year: 2010,
+                    coffeeName: '',
+                    description: '',
+                    price: '',
+                    variety: '',
+                    processing: '',
+                    crop_year: '',
                 }
             ],
             farm_feature: [
                 {
                     id: 1,
                     title: "Fragance",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 2,
                     title: "Flavor",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 3,
                     title: "Aftertaste",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 4,
                     title: "Acidity",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 5,
                     title: "Body",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 6,
                     title: "Uniformity",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 7,
                     title: "Balance",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 8,
                     title: "Clean cup",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 9,
                     title: "Sweetness",
-                    percentage: 50,
+                    percentage: '',
                 },
                 {
                     id: 10,
                     title: "Overall",
-                    percentage: 50,
+                    percentage: '',
                 }
             ],
             farm_certificate: [
                 {
-                    designation: 'a',
-                    comment: 'a',
+                    designation: '',
+                    comment: '',
                 }
             ],
             farm_history: [
                 {
-                    location: 'a',
-                    milestone: 'a',
-                    duration: 'a',
-                    comment: 'a',
+                    location: '',
+                    milestone: '',
+                    duration: '',
+                    comment: '',
                 }
             ]
         };
@@ -106,6 +106,16 @@ class From extends Component {
         this.handleChangeList = this.handleChangeList.bind(this);
         this.appendInfo = this.appendInfo.bind(this);
         this.handleImageChange = this.handleImageChange.bind(this);
+        this.handleRedirect = this.handleRedirect.bind(this);
+    }
+
+    handleRedirect = res => {
+        if( res.status === 201 && window !== 'undefined'){
+            window.location.href = '/farm-profile/' + res.data.farmName + '?id=' + res.data.id
+        }else {
+          // Something went wrong here
+        }
+
     }
 
     handleChange = event => {
@@ -182,18 +192,20 @@ class From extends Component {
                 this.setState({
                     profilePic: imgRest.data.image
                   })
-                console.log('sucess', imgRest.data.image);
-                console.log('state', this.state);
+                console.log('sucess img upload', imgRest.data);
                 return axios.post(farmEndPoint, this.state, {
                     headers: {'content-type': 'application/json'}
                 })
+            }).then(newfarmRes => {
+                console.log('sucess farm upload', newfarmRes.data);
+                this.handleRedirect(newfarmRes)
             })
             .catch(err => console.log(err));
     };
 
 
     render () {
-        console.log(this.state);
+        // console.log(this.state);
         return (
             <div className="contact-form-wrap">
                 <form id="contact-form" onSubmit={event => this.handleSubmit(event)}>
@@ -209,9 +221,6 @@ class From extends Component {
                         </div>
                         <div className="col-sm-12">
                             <div className="single-input-item">
-                                {/* <label>
-                                <input type={'file'} name={'profilePic'} placeholder={'profilePic *'} onChange={this.handleImageChange}/>
-                                </label> */}
                                 <input type="file"
                                     id={"profilePic"}
                                     accept={"image/png, image/jpeg"}  onChange={this.handleImageChange} required/>

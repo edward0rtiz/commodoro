@@ -1,13 +1,14 @@
 import React from 'react';
 const MemberInfo = ({farmData, userName}) => {
     // const {address,phone,email} = farmUnit;
-    const {farmName,bio,facebook,twitter,linkedin,instagram,address,phone,email} = farmData;
+    const {profilePic,farmName,bio,facebook,twitter,linkedin,instagram,address,phone,email} = farmData;
+    console.log(profilePic);
     return (
         <div className="member-details-top">
             <div className="row">
                 <div className="col-md-5">
                     <div className="member-pic mb-sm-35">
-                        <img src={require('../../assets/img/users/01.jpg')} alt={farmName}/>
+                        <img src={profilePic} alt={farmName}/>
                     </div>
                 </div>
 
