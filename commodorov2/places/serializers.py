@@ -75,7 +75,7 @@ class PictureSerializer(serializers.ModelSerializer):
         model = Picture
         fields = (
             'id',
-            'farm',
+            # 'farm',
             'image',
         )
         # read_only_fields = ('farm', )
