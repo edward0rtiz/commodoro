@@ -11,93 +11,93 @@ class From extends Component {
         super(props);
         this.state = {
             user: 2,
-            farmName: '',
+            farmName: 'a',
             profilePic: null,
-            bio: '',
-            address: '',
-            country: '',
-            region: '',
-            phone: '',
-            email: '',
-            facebook: '',
-            twitter: '',
-            linkedin: '',
-            instagram: '',
+            bio: 'a',
+            address: 'a',
+            country: 'a',
+            region: 'a',
+            phone: '1',
+            email: 'a@g.com',
+            facebook: 'a',
+            twitter: 'a',
+            linkedin: 'a',
+            instagram: 'a',
             farm_product: [
                 {
                     id: 1,
-                    coffeeName: '',
-                    description: '',
-                    price: '',
-                    variety: '',
-                    processing: '',
-                    crop_year: '',
+                    coffeeName: 'a',
+                    description: 'a',
+                    price: 15,
+                    variety: 'a',
+                    processing: 'a',
+                    crop_year: 2010,
                 }
             ],
             farm_feature: [
                 {
                     id: 1,
                     title: "Fragance",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 2,
                     title: "Flavor",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 3,
                     title: "Aftertaste",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 4,
                     title: "Acidity",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 5,
                     title: "Body",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 6,
                     title: "Uniformity",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 7,
                     title: "Balance",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 8,
                     title: "Clean cup",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 9,
                     title: "Sweetness",
-                    percentage: '',
+                    percentage: 50,
                 },
                 {
                     id: 10,
                     title: "Overall",
-                    percentage: '',
+                    percentage: 50,
                 }
             ],
             farm_certificate: [
                 {
-                    designation: '',
-                    comment: '',
+                    designation: 'a',
+                    comment: 'a',
                 }
             ],
             farm_history: [
                 {
-                    location: '',
-                    milestone: '',
-                    duration: '',
-                    comment: '',
+                    location: 'a',
+                    milestone: 'a',
+                    duration: 'a',
+                    comment: 'a',
                 }
             ]
         };
@@ -165,47 +165,36 @@ class From extends Component {
             return newState;
         });
     };
-    // ----BLOG EXAMPLE---------------------------------------------------------------
-    // handleImageChange = (e) => {
-    //     this.setState({
-    //       image: e.target.files[0]
-    //     })
-    //   };
-    //   handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log(this.state);
-    //     let form_data = new FormData();
-    //     form_data.append('image', this.state.image, this.state.image.name);
-    //     form_data.append('title', this.state.title);
-    //     form_data.append('content', this.state.content);
-    //     let url = 'http://localhost:8000/api/posts/';
-    //     axios.post(url, form_data, {
-    //       headers: {
-    //         'content-type': 'multipart/form-data'
-    //       }
-    //-----------------------------------------------------------------------------------
-    handleSubmit = (event, farmData) => {
+
+    handleSubmit = (event) => {
         event.preventDefault();
-        if (farmData.farm_certificate.length > 1) {
-            farmData.farm_certificate.shift();
+        if (this.state.farm_certificate.length > 1) {
+            this.state.farm_certificate.shift();
         }
-        if (farmData.farm_history.length > 1) {
-            farmData.farm_history.shift();
+        if (this.state.farm_history.length > 1) {
+            this.state.farm_history.shift();
         }
-        axios.post('/api/v1/pictures/', this.state.profilePic, {
-                headers: {'content-type': 'application/json'}    
+        let form_data = new FormData();
+        form_data.append('image', this.state.profilePic, this.state.profilePic.name);
+        axios.post('/api/v1/pictures/', form_data, {
+                headers: {'content-type': 'multipart/form-data'}    
             }).then(res => {
+                this.setState({
+                    profilePic: res.data.image
+                  })
                 console.log('sucess', res.data);
-            })
+            }).then(
+                console.log("After image", this.state)
+                // axios({
+                //     method:'post',
+                //     url: farmEndPoint,
+                //     data: this.state,
+                //     headers: {
+                //             'content-type': 'application/json',
+                //         }
+                //     })
+            )
             .catch(err => console.log(err));
-        // axios({
-        //     method:'post',
-        //     url: farmEndPoint,
-        //     data: farmData,
-        //     headers: {
-        //             'content-type': 'application/json',
-        //         }
-        //     })
     };
 
 
@@ -213,7 +202,7 @@ class From extends Component {
         console.log(this.state);
         return (
             <div className="contact-form-wrap">
-                <form id="contact-form" onSubmit={event => this.handleSubmit(event, this.state)}>
+                <form id="contact-form" onSubmit={event => this.handleSubmit(event)}>
                     <div className="row">
                         {/* -------------- FARM INFO -------------- */}
                         <div className="col-md-8"><h5 className="font-weight-bold">Farm Information</h5></div>
@@ -226,9 +215,12 @@ class From extends Component {
                         </div>
                         <div className="col-sm-12">
                             <div className="single-input-item">
-                                <label>
-                                <input type={'file'} name={'profilePic'} placeholder={'profilePic *'} onChange={this.handleImageChange} required/>
-                                </label>
+                                {/* <label>
+                                <input type={'file'} name={'profilePic'} placeholder={'profilePic *'} onChange={this.handleImageChange}/>
+                                </label> */}
+                                <input type="file"
+                                    id={"profilePic"}
+                                    accept={"image/png, image/jpeg"}  onChange={this.handleImageChange} required/>
                                 <p>Please, attach a picture of your farm</p>
 
                             </div>

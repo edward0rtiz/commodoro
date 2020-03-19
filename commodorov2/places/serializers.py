@@ -73,11 +73,7 @@ class PictureSerializer(serializers.ModelSerializer):
     """ Serialize the list of pictures """
     class Meta:
         model = Picture
-        fields = (
-            'id',
-            # 'farm',
-            'image',
-        )
+        fields = '__all__'
         # read_only_fields = ('farm', )
 
 
