@@ -445,14 +445,14 @@ class From extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <   input type={'textarea'} name={'farm_certificate.designation'} placeholder={'Name your certificate'} value={this.state.farm_certificate[0].designation} onChange={this.handleChangeList} required />
+                                <   input type={'textarea'} name={'farm_certificate.designation'} placeholder={'Name your certificate'} value={this.state.farm_certificate[0].designation} onChange={this.handleChangeList}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                    <input type={'textarea'} name={'farm_certificate.comment'} placeholder={'Describe your certificate'} value={this.state.farm_certificate[0].comment} onChange={this.handleChangeList} required />
+                                    <input type={'textarea'} name={'farm_certificate.comment'} placeholder={'Describe your certificate'} value={this.state.farm_certificate[0].comment} onChange={this.handleChangeList}/>
                                 </label>
                             </div>
                         </div>
@@ -467,28 +467,28 @@ class From extends Component {
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <   input type={'textarea'} name={'farm_history.location'} placeholder={'Location'} value={this.state.farm_history[0].location} onChange={this.handleChangeList} required />
+                                <   input type={'textarea'} name={'farm_history.location'} placeholder={'Location'} value={this.state.farm_history[0].location} onChange={this.handleChangeList} />
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farm_history.milestone'} placeholder={'Milestone i.e "The Farm was created'} value={this.state.farm_history[0].milestone} onChange={this.handleChangeList} required/>
+                                <input type={'textarea'} name={'farm_history.milestone'} placeholder={'Milestone i.e "The Farm was created'} value={this.state.farm_history[0].milestone} onChange={this.handleChangeList}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farm_history.duration'} placeholder={'Date (MM - YY)'} value={this.state.farm_history[0].duration} onChange={this.handleChangeList} required />
+                                <input type={'textarea'} name={'farm_history.duration'} placeholder={'Date (MM - YY)'} value={this.state.farm_history[0].duration} onChange={this.handleChangeList}/>
                                 </label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
-                                <input type={'textarea'} name={'farm_history.comment'} placeholder={'Description'} value={this.state.farm_history[0].comment} onChange={this.handleChangeList} required/>
+                                <input type={'textarea'} name={'farm_history.comment'} placeholder={'Description'} value={this.state.farm_history[0].comment} onChange={this.handleChangeList}/>
                                 </label>
                             </div>
                         </div>

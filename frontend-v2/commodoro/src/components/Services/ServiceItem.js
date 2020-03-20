@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 function ServiceItem(props) {
     // const farmprofileURL = `/farm-profile/${props.title.split(' ').join('-').toLowerCase()}?id=${props.id}`
     const farmprofileURL = `/farm-profile/${"las-margaritas"}?id=${"1"}`
+
     return (
         <div className="col-sm-6 col-lg-4">
             <div className="service-item">

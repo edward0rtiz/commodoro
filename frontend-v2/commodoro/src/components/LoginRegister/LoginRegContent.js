@@ -8,7 +8,8 @@ const LoginRegister = () => {
                 <div className="log-in-content-wrap">
                     <h2>Login</h2>
                     <div className="login-form mtn-15">
-                        <form action="#" method="post">
+                        {/* <form action="#" method="post"> */}
+                        <form action="/FarmForm/" >
                             <div className="form-input-item">
                                 <label htmlFor="username" className="sr-only">Username</label>
                                 <input type="text" id="username" placeholder="Username" required/>
@@ -20,7 +21,8 @@ const LoginRegister = () => {
                             </div>
 
                             <div className="form-input-item">
-                                <button type="submit" className="btn-submit">Login</button>
+                                {/* <button type="submit" href="http://localhost:3000/FarmForm" className="btn-submit">Login</button> */}
+                                <button type="submit" href="/FarmForm" className="btn-submit">Login</button>
                             </div>
                         </form>
                     </div>
