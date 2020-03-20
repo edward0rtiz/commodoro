@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LoadingButton from "../../components/LoadingButton/index";
 import axios from 'axios';
+import '../../assets/scss/pages/_Form.scss';
 
 
 const farmEndPoint = '/api/v1/farms/'
@@ -209,9 +210,12 @@ class From extends Component {
         return (
             <div className="contact-form-wrap">
                 <form id="contact-form" onSubmit={event => this.handleSubmit(event)}>
-                    <div className="row">
+                    <div className="row wrapper-forms">
                         {/* -------------- FARM INFO -------------- */}
-                        <div className="col-md-8"><h5 className="font-weight-bold">Farm Information</h5></div>
+                        <div className="col-md-8">
+                            <h5 className="font-weight-bold">Farm Information</h5>
+                            <p>Fill all the fields to create you own farm page.</p>
+                        </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
@@ -270,9 +274,13 @@ class From extends Component {
                                 </label>
                             </div>
                         </div>
-
+                    </div>
+                    <div className="row wrapper-forms">
                         {/* -------------- SOCIAL MEDIA -------------- */}
                         <div className="col-md-8"><h5 className="font-weight-bold">Social Media Information</h5></div>
+                        <div className="col-12">
+                            <p>Let people conect with your amaizing coffee.</p>
+                        </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
@@ -301,8 +309,13 @@ class From extends Component {
                                 </label>
                             </div>
                         </div>
+                    </div>
+                    <div className="row wrapper-forms">
                         {/* -------------- COFFEE INFO -------------- */}
                         <div className="col-md-8"><h5 className="font-weight-bold">Coffee Information</h5></div>
+                        <div className="col-12">
+                            <p>More information gives your clients the oportunity to know your product.</p>
+                        </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
@@ -345,9 +358,13 @@ class From extends Component {
                                 </label>
                             </div>
                         </div>
-
+                    </div>
+                    <div className="row wrapper-forms">
                         {/* -------------- COFFEE FEATURES -------------- */}
                         <div className="col-md-8"><h5 className="font-weight-bold">Coffee Features</h5></div>
+                        <div className="col-12">
+                            <p>Describe your coffee, let us and your clients know what type of coffee you offer.</p>
+                        </div>
                         <div className="col-sm-6">
                             <div className="single-input-item">
                                 <label>
@@ -418,9 +435,13 @@ class From extends Component {
                                 </label>
                             </div>
                         </div>
-
+                    </div>
+                    <div className="row wrapper-forms">
                         {/* -------------- CERT INFO -------------- */}
                         <div className="col-md-8"><h5 className="font-weight-bold">Certificates Information</h5></div>
+                        <div className="col-12">
+                            <p>Certificates will make your product trustable.</p>
+                        </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
@@ -436,8 +457,13 @@ class From extends Component {
                             </div>
                         </div>
                         <div><LoadingButton name={'farm_certificate'} appendInfo={this.appendInfo}/></div>
+                    </div>
+                    <div className="row wrapper-forms">
                         {/* -------------- HISTORY -------------- */}
                         <div className="col-md-8"><h5 className="font-weight-bold">Farms History</h5></div>
+                        <div className="col-12">
+                            <p>Share your story ang engage with your clients.</p>
+                        </div>
                         <div className="col-12">
                             <div className="single-input-item">
                                 <label>
