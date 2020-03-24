@@ -7,7 +7,11 @@ from rest_framework.authtoken.models import Token
 
 class UserSerializer(serializers.ModelSerializer):
     """ Serialization of the User, calling just
-    some fields, and nesting the Profile serialization """
+    some fields, and nesting the Profile serialization
+
+    Returns:
+        User -- Built-in DRF serializer
+    """
     class Meta:
         model = User
         fields = (
@@ -28,6 +32,12 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class FeatureSerializer(serializers.ModelSerializer):
+    """Serialization of Feature model, need to nest to
+    FarmSerializer
+
+    Arguments:
+        serializers {ModelSerializer} -- Built-in DRF serializer
+    """
     class Meta:
         model = Feature
         fields = (
@@ -41,6 +51,12 @@ class FeatureSerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    """Serialization of Product model, need to nest to
+    FarmSerializer
+
+    Arguments:
+        serializers {ModelSerializer} -- Built-in DRF serializer
+    """
     # product_feature = FeatureSerializer(many=True)
     class Meta:
         model = Product
@@ -57,17 +73,7 @@ class ProductSerializer(serializers.ModelSerializer):
         )
         read_only_fields = ('farm', )
 
-
-"""    def create(self, validated_data):
-        features_data = validated_data.pop('product_feature')
-        product_instance = Product.objects.create(**validated_data)
-
-        for feature_data in features_data:
-            Product.objects.create(sdasd=product_instance, **feature_data)
-"""
-
 # -------- Serialize the place appends ---------------------
-
 
 class PictureSerializer(serializers.ModelSerializer):
     """ Serialize the list of pictures """
@@ -78,6 +84,7 @@ class PictureSerializer(serializers.ModelSerializer):
 
 
 class CertificateSerializer(serializers.ModelSerializer):
+    """Serialize list of certificates """
     class Meta:
         model = Certificate
         fields = (
@@ -89,6 +96,7 @@ class CertificateSerializer(serializers.ModelSerializer):
 
 
 class HistorySerializer(serializers.ModelSerializer):
+    """ Serialize list of milestone from History """
     class Meta:
         model = History
         fields = (
@@ -136,7 +144,11 @@ class FarmSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """ Modify Create for be able to create coffee, and
-                pictures instances in the farms view """
+        pictures instances in the farms view
+
+        Returns:
+            farm_instance -- the new farm to be posted
+        """
         # feature_data = validated_data.pop('product_feature')
         products_data = validated_data.pop('farm_product')
         features_data = validated_data.pop('farm_feature')

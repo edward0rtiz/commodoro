@@ -8,21 +8,33 @@ from rest_framework import status
 from .serializers import *
 
 class FarmsListView(generics.ListCreateAPIView):
+    """View of Farms
+
+    Arguments:
+        generics {ListCreateAPIView} -- Built-in DRF view
+    """
     queryset = Farm.objects.all()
     serializer_class = FarmSerializer
 
 
 class FarmsView(generics.RetrieveUpdateDestroyAPIView):
+    """View of a specific Farm
+
+    Arguments:
+        generics {ListCreateAPIView} -- Built-in DRF view
+    """
     serializer_class = FarmSerializer
     queryset = Farm.objects.all()
 
-
-# class PicturesListView(generics.ListCreateAPIView):
-#     parser_classes = (MultiPartParser, FormParser)
-#     queryset = Picture.objects.all()
-#     serializer_class = PictureSerializer
-
 class PicturesListView(APIView):
+    """List of Pictures view
+
+    Arguments:
+        APIView -- Built-in DRF view
+
+    Returns:
+        Response -- Data or signal
+    """
     parser_classes = (MultiPartParser, FormParser)
 
     def get(self, request, *args, **kwargs):
@@ -41,15 +53,30 @@ class PicturesListView(APIView):
 
 
 class PicturesView(generics.RetrieveUpdateDestroyAPIView):
+    """View of a specific Picture
+
+    Arguments:
+        generics {RetrieveUpdateDestroyAPIView} -- Built-in DRF view
+    """
     serializer_class = PictureSerializer
     queryset = Picture.objects.all()
 
 
 class CertificatesListView(generics.ListCreateAPIView):
+    """View of Certificates
+
+    Arguments:
+        generics {ListCreateAPIView} -- Built-in DRF view
+    """
     queryset = Certificate.objects.all()
     serializer_class = CertificateSerializer
 
 
 class CertificatesView(generics.RetrieveUpdateDestroyAPIView):
+    """View of a specific Certificate
+
+    Arguments:
+        generics {RetrieveUpdateDestroyAPIView} -- Built-in DRF view
+    """
     serializer_class = CertificateSerializer
     queryset = Certificate.objects.all()

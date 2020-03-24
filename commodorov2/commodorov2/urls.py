@@ -9,7 +9,8 @@ from django.conf.urls.static import static
 #----------auth------------------
 from rest_framework.authtoken.views import obtain_auth_token
 
-
+"""Different views of the API
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', obtain_auth_token),
