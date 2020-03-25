@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "counterNumber": 1202,
+    "counterText": "Happy Clients"
+  },
+  {
+    "id": 2,
+    "counterNumber": 1088,
+    "counterText": "Deliveries Up-to-date"
+  },
+  {
+    "id": 3,
+    "counterNumber": 6,
+    "counterText": "Awards Win"
+  },
+  {
+    "id": 4,
+    "counterNumber": 8654,
+    "counterText": "Bags of Coffee"
+  }
+]

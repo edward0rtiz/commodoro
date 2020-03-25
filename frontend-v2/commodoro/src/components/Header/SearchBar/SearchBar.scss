@@ -1,0 +1,13 @@
+.input-group-sm > .form-control {
+    border-top-right-radius: 1.2rem !important;
+    border-bottom-right-radius: 1.2rem !important;
+}
+
+.input-group > .input-group-prepend > .input-group-text {
+    border-top-left-radius: 1.2rem !important;
+    border-bottom-left-radius: 1.2rem !important;
+    color: white;
+    background-color: grayscale($color: #ffffff3b);
+    border: 0px;
+    width: 100%;
+}
