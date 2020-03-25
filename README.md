@@ -1,6 +1,12 @@
-# Commodoro 
 
-Documentation for commodoro web application marketplace (work in progress)
+# Commodoro :seedling:
+
+
+> Commodoro is a professional networking platform for coffee farmers > so they can build, share the history and products of they farm in 
+> the internet. Also it allows the supplier to get accurate 
+> information of the farmers and their coffees without reaching the 
+> site allowinf both suppliers and farmers facilities to network and > trade their coffee.
+
 
 Contributing
 ============
@@ -8,15 +14,11 @@ Contributing
 [![](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/images/0)](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/links/0)[![](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/images/1)](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/links/1)[![](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/images/2)](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/links/2)[![](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/images/3)](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/links/3)[![](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/images/4)](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/links/4)[![](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/images/5)](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/links/5)[![](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/images/6)](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/links/6)[![](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/images/7)](https://sourcerer.io/fame/edward0rtiz/edward0rtiz/commodoro/links/7)
 
 
-# Commodoro :seedling:
+# Browser Support :computer:
 
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
-> Commodoro is a professional networking platform for coffee farmers > so they can build, share the history and products of they farm in 
-> the internet. Also it allows the supplier to get accurate 
-> information of the farmers and their coffees without reaching the 
-> site allowinf both suppliers and farmers facilities to network and > trade their coffee.
+![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
+--- | --- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 
 # Landing Page :ticket:
 
