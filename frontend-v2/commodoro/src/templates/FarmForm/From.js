@@ -3,13 +3,14 @@ import LoadingButton from "../../components/LoadingButton/index";
 import axios from 'axios';
 import '../../assets/scss/pages/_Form.scss';
 
-
+// url to post all farm information
 const farmEndPoint = '/api/v1/farms/'
 
 class From extends Component {
 
     constructor(props){
         super(props);
+        // the component state will store all form inputs fields in the page to make a single post
         this.state = {
             user: 2,
             farmName: '',
@@ -110,11 +111,12 @@ class From extends Component {
         this.handleRedirect = this.handleRedirect.bind(this);
     }
 
+    // when the farm is successfully created, this function redirect to profile view
     handleRedirect = res => {
         if( res.status === 201 && window !== 'undefined'){
             window.location.href = '/farm-profile/' + res.data.farmName + '?id=' + res.data.id
         }else {
-          // Something went wrong here
+          console.log('Error: ', res.status);
         }
 
     }
@@ -133,8 +135,9 @@ class From extends Component {
         this.setState({
           profilePic: event.target.files[0]
         })
-      };
+    };
 
+    // this function was created to handle information for nested list in the state in a recursive way
     handleChangeList = event => {
         const name = event.target.name;
         const key = name.split(".");
@@ -157,6 +160,7 @@ class From extends Component {
         }
     };
 
+    // each time the user add a new mileston in history or add more certificates this will add info as needed
     appendInfo = (name) => {
         this.setState(prevState => {
             const newState = { ...prevState };
@@ -177,14 +181,17 @@ class From extends Component {
         });
     };
 
+    // when info is ready this function will send the info to API first the image and then the farm info
     handleSubmit = (event) => {
         event.preventDefault();
+        // we want to send clean form with out unnesesary data
         if (this.state.farm_certificate.length > 1) {
             this.state.farm_certificate.shift();
         }
         if (this.state.farm_history.length > 1) {
             this.state.farm_history.shift();
         }
+        // we handle a multipart form data
         let form_data = new FormData();
         form_data.append('image', this.state.profilePic, this.state.profilePic.name);
         axios.post('/api/v1/pictures/', form_data, {
@@ -206,7 +213,6 @@ class From extends Component {
 
 
     render () {
-        // console.log(this.state);
         return (
             <div className="contact-form-wrap">
                 <form id="contact-form" onSubmit={event => this.handleSubmit(event)}>
