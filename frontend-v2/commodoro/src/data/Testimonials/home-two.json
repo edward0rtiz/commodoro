@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "quote": "My sales to other countries have increased since I use commodity. I can also show the profile of my farm clearly.",
+    "author": "Carlos Diaz",
+    "authorThumb": "testimonial/cust1.png"
+  },
+  {
+    "id": 2,
+    "quote": "Since I started using commodoro I can find different clients around the world, I can contact them quickly and easily.",
+    "author": "Jairo Bogota",
+    "authorThumb": "testimonial/cust2.png"
+  },
+  {
+    "id": 3,
+    "quote": "Since I use commodity I can find different coffee producers and create a previous relationship more efficiently. My company has increased the purchase of coffee thanks to commodoro.",
+    "author": "George Button",
+    "authorThumb": "testimonial/cust3.png"
+  }
+]
