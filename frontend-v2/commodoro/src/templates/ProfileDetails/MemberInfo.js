@@ -1,8 +1,8 @@
 import React from 'react';
+
 const MemberInfo = ({farmData, userName}) => {
-    // const {address,phone,email} = farmUnit;
+    // get variables from farm json information
     const {profilePic,farmName,bio,facebook,twitter,linkedin,instagram,address,phone,email} = farmData;
-    console.log(profilePic);
     return (
         <div className="member-details-top">
             <div className="row">
@@ -37,7 +37,5 @@ const MemberInfo = ({farmData, userName}) => {
         </div>
             );
 }
-
-
 
 export default MemberInfo;

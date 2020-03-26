@@ -1,11 +1,11 @@
 import React from 'react';
-// import SkillBar from "../../components/SkillBar";
 import SkillRadar from "../../components/SkillRadar";
 import Certificate from "../../components/Certificate";
 
 const ProductFeatures = ({farmData, coffeData, _isMounted}) => {
     const {farm_certificate, farm_feature} = farmData;
 
+    // function get the info from the json and translate it for the dinamic skillradar component
     const handelCoffeData = (farm_feature) => {
         return farm_feature.map((feature) => {
             const singleObj = {};
@@ -43,7 +43,6 @@ const ProductFeatures = ({farmData, coffeData, _isMounted}) => {
                                 if(_isMounted){
                                     return farm_certificate.map(certificate=>(
                                         <Certificate
-                                            // key={certificate.no}
                                             designation={certificate.designation}
                                             icon={"team/details/date-1.jfif"}
                                             comment={certificate.comment}
