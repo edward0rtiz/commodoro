@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Create your farm",
+    "shortDesc": "Only fill one form and create your farm presenting your coffee detailed. This is going to be your profile to be shown all over the world.",
+    "thumb": "service/farm_profile01.png"
+  },
+  {
+    "id": 2,
+    "title": "Set the price of your coffee",
+    "shortDesc": "We know you coffee cost more than the market that is why you can set the price of your coffee based in your real production cost.",
+    "thumb": "service/price_bar.png"
+  },
+  {
+    "id": 3,
+    "title": "Join in a professional community",
+    "shortDesc": "Join the largest community of coffee farmers around the world. Share experiences, knowledge and comming soon more farmers from other goods will join too",
+    "thumb": "service/farmerv3.png"
+  }
+]
