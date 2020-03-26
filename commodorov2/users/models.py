@@ -4,6 +4,15 @@ from PIL import Image
 
 
 class Profile(models.Model):
+    """ Profile model, linked to User, the user can upload a
+    profile picture
+
+    Arguments:
+        models {models} -- Built-in  Django Model
+
+    Returns:
+        str -- username of profile
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile')
 
