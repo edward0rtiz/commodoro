@@ -1,0 +1,18 @@
+ .btn-loading {
+     border-radius: 100px !important;
+     max-width: 20%;
+     padding: .8rem .5rem !important;
+     font-weight: 400 !important;
+     line-height: 1 !important;
+     margin-left: 610px;
+   }
+  
+  .btn-loading .main, .btn-success:not(:disabled):not(.disabled).active {
+    background-color: #0b7544 !important;
+    border-color: #0b7544 !important;
+  }
+  
+  // .button-order-wrapper {
+  //   justify-content: center;
+  // }
+  

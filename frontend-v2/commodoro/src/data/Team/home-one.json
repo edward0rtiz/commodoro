@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "farmName": "Las Pulgas",
+    "userName": "Carlos Diaz",
+    "profilePic": "team/01.jpg",
+    "bio": "Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca itate non vident, similique sunt in culpa modi tempora incidunt ut labore et dolor am aera boluptatum deleniti atque corrupti quosres <br/> Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca itate non vident, similique sunt in culpa modi tempora incidunt ut labore",
+    "address": "256 Central Street, Mosque Tower <br/> Central City, New York",
+    "phone": "+012354 658 987",
+    "email": "mail@lucyfarnando.com",
+    "website": "www.lucyfarnando.com",
+    "socials": {
+      "facebook": "rajuahammadfanz",
+      "twitter": "rajuahammadfanz",
+      "linkedin": "rajuahammadfanz",
+      "reddit": "rajuahammadfanz",
+      "pinterest": "rajuahammadfanz"
+    },
+    "coffeeFeatures": [
+      {
+        "no": 1,
+        "title": "Flavor",
+        "percentage": 80
+      },
+      {
+        "no": 2,
+        "title": "Taste",
+        "percentage": 75
+      },
+      {
+        "no": 3,
+        "title": "Acidity",
+        "percentage": 75
+      },
+      {
+        "no": 4,
+        "title": "Uniformity",
+        "percentage": 80
+      }
+    ],
+    "certificates": [
+      {
+        "no": 1,
+        "designation": "Rain Forest Alliance",
+        "icon": "team/details/date-1.jfif",
+        "comment": "Certification of standard in sustainable farms"
+      },
+      {
+        "no": 2,
+        "designation": "JAS",
+        "icon": "team/details/date-2.png",
+        "comment": "Certification of organic coffee for exports in Japan."
+      },
+      {
+        "no": 3,
+        "designation": "UTZ",
+        "icon": "team/details/date-3.png",
+        "comment": "Certification of sustainable coffee Farm."
+      }
+    ],
+    "history": [
+      {
+        "no": 1,
+        "location": "Cachipay - Cundinamarca",
+        "milestone": "Farm Las Margaritas is born",
+        "duration": "MAY 1995",
+        "comment": "Carlos Diaz build a small house in an area of 7 hectares to harvest coffee and tangerine.."
+      },
+      {
+        "no": 2,
+        "location": "Cachipay - Cundinamarca",
+        "milestone": "First harvest of Caturra",
+        "duration": "JUN 1996",
+        "comment": "With a total of 3 hectares Las Margaritas harvested its first batch of coffee."
+      },
+      {
+        "no": 3,
+        "location": "Cachipay - Cundinamarca",
+        "milestone": "First export to USA",
+        "duration": "OCT 2002",
+        "comment": "A first batch of 20 bags of 50kg were exported to USA"
+      },
+      {
+        "no": 4,
+        "location": "Cachipay - Cundinamarca",
+        "milestone": "Las Margaritas coffee obtains Rain Forest certificate",
+        "duration": "APR 2008",
+        "comment": "The farm obtains the Rain Forest certification."
+      }
+    ]
+  }
+]

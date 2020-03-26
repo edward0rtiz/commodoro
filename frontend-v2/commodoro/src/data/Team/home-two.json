@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Edward Ortiz",
+    "designation": "CEO & Founder",
+    "profilePic": "team/team_landing_page/eo.png",
+    "linkedin": "in/ortizedward/"
+  },
+  {
+    "id": 2,
+    "name": "David Peralta",
+    "designation": "COO & Founder",
+    "profilePic": "team/team_landing_page/dp.png",
+    "linkedin": "in/david-peralta-52060a50/"
+  },
+  {
+    "id": 3,
+    "name": "Carlos Molano",
+    "designation": "CTO & Founder",
+    "profilePic": "team/team_landing_page/cm.png",
+    "linkedin": "in/carlos-molano-salazar-605a6bb6/"
+  }
+]

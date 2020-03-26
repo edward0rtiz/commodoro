@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Community",
+    "text": "Our motto is to be transparent and to engage transparently with suppliers.",
+    "imgSrc": "feature/01.png"
+  },
+  {
+    "id": 2,
+    "title": "Reliable and Secure",
+    "text": "Soon you will expand your farm business with our innovative escrow payment so your sales are going to increase",
+    "imgSrc": "feature/02.png"
+  },
+  {
+    "id": 3,
+    "title": "Online Support",
+    "text": "We know you will find overwhelmed by having you farm online, don't worry, we're here to help you.",
+    "imgSrc": "feature/03.png"
+  }
+]
